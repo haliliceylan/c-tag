@@ -11,7 +11,7 @@ class DefaultDataSeeder extends Seeder
      */
     public function run()
     {
-      ConnectionTag::create['action_url' => 'http://ridvandayanc.com'];
-      ConnectionTag::create['action_url' => 'http://haliliceylan.com'];
+      ConnectionTag::create(['action_url' => 'http://ridvandayanc.com']);
+      ConnectionTag::create(['action_url' => 'http://haliliceylan.com']);
     }
 }

@@ -102,6 +102,32 @@
 <script>
 $('#MRBH').DataTable({
     "ordering": false,
+    "scrollX": true,
+		"autoWidth": false,
+		"language": {
+			"decimal":        "",
+			"emptyTable":     "Bu tablo için kullanılabilir veri yok.",
+			"info":           "_TOTAL_ kayıttan _START_ ile _END_ arası kayıt gösteriliyor.",
+			"infoEmpty":      "0 kayıttan 0 kayıt gösteriliyor.",
+			"infoFiltered":   "(_MAX_ veriden filtrelendi.)",
+			"infoPostFix":    "",
+			"thousands":      ",",
+			"lengthMenu":     "Her sayfada _MENU_ kayıt gösteriliyor.",
+			"loadingRecords": "Yükleniyor...",
+			"processing":     "İşleniyor...",
+			"search":         "Arama:",
+			"zeroRecords":    "Eşleşen kayıt bulunamadı.",
+			"paginate": {
+				"first":      "İlk",
+				"last":       "Son",
+				"next":       "Sonraki",
+				"previous":   "Önceki"
+			},
+			"aria": {
+				"sortAscending":  ": artana göre kolon sıralaması aktif edildi.",
+				"sortDescending": ": azalana göre kolon sıralaması aktif edildi."
+			}
+		}
   })
 //DONUT CHART
 var donut = new Morris.Donut({

@@ -133,7 +133,7 @@ $('#MRBH').DataTable({
 var donut = new Morris.Donut({
   element: 'sales-chart',
   resize: true,
-  colors: ["#3c8dbc", "#f56954", "#00a65a"],
+  colors: {!!$data->chart->json_color!!},
   data: {!!$data->chart->json!!},
   hideHover: 'auto'
 });

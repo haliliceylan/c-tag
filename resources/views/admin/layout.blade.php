@@ -30,16 +30,16 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
     <a href="{{route('admin.dashboard')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>C</b>T</span>
+      <span class="logo-mini"><b>C-</b>tag</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Connection</b>TAGS</span>
+      <span class="logo-lg"><b>Connection</b> Tags</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -59,17 +59,16 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/lte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="/lte/dist/img/avatar5.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Halil İbrahim Ceylan</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+        <li class="header">Navigasyon</li>
+        <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"></i> <span>Ana Sayfa</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

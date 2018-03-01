@@ -100,7 +100,9 @@
 @endsection
 @section('js_code')
 <script>
-$('#MRBH').DataTable()
+$('#MRBH').DataTable({
+    "ordering": false,
+  })
 //DONUT CHART
 var donut = new Morris.Donut({
   element: 'sales-chart',

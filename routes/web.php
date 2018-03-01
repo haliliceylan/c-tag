@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['as' => 'admin.', 'prefix' => 'admin'], function(){
+  Route::get('/','AdminPageController@index')->name('dashboard');
+  Route::get('/platform/{platform}','AdminPageController@platform')->name('platform');
+  Route::get('/tag/{connectionTag}','AdminPageController@tag')->name('tag');
+});

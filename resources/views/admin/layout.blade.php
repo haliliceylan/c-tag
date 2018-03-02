@@ -30,49 +30,42 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-black-light sidebar-mini">
+<body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
-
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="{{route('admin.dashboard')}}" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>C-</b>tag</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Connection</b> Tags</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="/lte/dist/img/avatar5.png" class="img-circle" alt="User Image">
+    <header class="main-header">
+      <nav class="navbar navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="{{route('admin.dashboard')}}" class="navbar-brand"><b>Connection</b> Tags</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{route('admin.dashboard')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle">
+                  <img src="/lte/dist/img/avatar5.png" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Halil İbrahim Ceylan</span>
+                </a>
+              </li>
+              <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-custom-menu -->
         </div>
-        <div class="pull-left info">
-          <p>Halil İbrahim Ceylan</p>
-        </div>
-      </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Navigasyon</li>
-        <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"></i> <span>Ana Sayfa</span></a></li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+        <!-- /.container-fluid -->
+      </nav>
+    </header>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

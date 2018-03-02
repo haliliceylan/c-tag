@@ -55,7 +55,7 @@
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle">
                   <img src="/lte/dist/img/avatar5.png" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Halil İbrahim Ceylan</span>
+                  <span class="hidden-xs">{{ Sentinel::getUser()->first_name . " " . Sentinel::getUser()->last_name }}</span>
                 </a>
               </li>
               <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out"></i></a></li>

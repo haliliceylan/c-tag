@@ -14,8 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['as' => 'admin.', 'prefix' => 'admin'], function(){
-  Route::get('/','AdminPageController@index')->name('dashboard');
-  Route::get('/platform/{platform}','AdminPageController@platform')->name('platform');
-  Route::get('/tag/{connectionTag}','AdminPageController@tag')->name('tag');
+Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
+    Route::group(['middleware' => ['SentinelAuth:guest']], function () {
+        Route::get('/login', 'AdminPageController@login')->name('login');
+        Route::post('/login', 'AdminPageController@auth')->name('auth');
+    });
+    Route::group(['middleware' => ['SentinelAuth:auth']], function () {
+        Route::get('/logout', 'AdminPageController@logout')->name('logout');
+        Route::get('/', 'AdminPageController@index')->name('index');
+        // Route::get('/platform/{platform}','AdminPageController@platform')->name('platform');
+        // Route::get('/tag/{connectionTag}','AdminPageController@tag')->name('tag');
+    });
 });

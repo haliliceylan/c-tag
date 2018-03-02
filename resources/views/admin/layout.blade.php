@@ -36,7 +36,7 @@
       <nav class="navbar navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="{{route('admin.dashboard')}}" class="navbar-brand"><b>Connection</b> Tags</a>
+            <a href="{{route('admin.index')}}" class="navbar-brand"><b>Connection</b> Tags</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>
@@ -44,7 +44,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="{{route('admin.dashboard')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="{{route('admin.index')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -58,7 +58,7 @@
                   <span class="hidden-xs">Halil İbrahim Ceylan</span>
                 </a>
               </li>
-              <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+              <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out"></i></a></li>
             </ul>
           </div>
           <!-- /.navbar-custom-menu -->

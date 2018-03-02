@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Action;
 use App\ConnectionTag;
 use \DB;
+use Sentinel;
+
 class AdminPageController extends Controller
 {
     public function index()
@@ -38,15 +40,39 @@ class AdminPageController extends Controller
               (object)['name' => 'mobile_grade', 'label' => 'Mobil Puanı'],
               (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
             ],
-            'datas' => Action::orderBy('created_at','desc')->get(),
+            'datas' => Action::orderBy('created_at', 'desc')->get(),
           ],
           'boxes' => [
-            (object)['color' => 'aqua','count' => ConnectionTag::count(),'icon' => 'ion ion-pricetags','title' => 'Toplam Tag Sayısı','action' => route('admin.dashboard')],
-            (object)['color' => 'yellow','count' => Action::count(),'icon' => 'ion ion-flash','title' => 'Toplam Etkileşim Sayısı','action' => route('admin.dashboard')],
-            (object)['color' => 'red','count' => Action::where('platform_family','Android')->count(),'icon' => 'fa fa-android','title' => 'Android','action' => route('admin.dashboard')],
-            (object)['color' => 'green','count' => Action::where('platform_family','iOS')->count(),'icon' => 'fa fa-apple','title' => 'IOS','action' => route('admin.dashboard')],
+            (object)['color' => 'aqua','count' => ConnectionTag::count(),'icon' => 'ion ion-pricetags','title' => 'Toplam Tag Sayısı','action' => route('admin.index')],
+            (object)['color' => 'yellow','count' => Action::count(),'icon' => 'ion ion-flash','title' => 'Toplam Etkileşim Sayısı','action' => route('admin.index')],
+            (object)['color' => 'red','count' => Action::where('platform_family', 'Android')->count(),'icon' => 'fa fa-android','title' => 'Android','action' => route('admin.index')],
+            (object)['color' => 'green','count' => Action::where('platform_family', 'iOS')->count(),'icon' => 'fa fa-apple','title' => 'IOS','action' => route('admin.index')],
           ],
         ];
         return view('admin.analyze', compact('data'));
+    }
+
+    public function login()
+    {
+        return view('admin.login');
+    }
+
+    public function auth(Request $request)
+    {
+        $credintials = [
+          'email'    => $request->email,
+          'password' => $request->password,
+        ];
+        if (Sentinel::authenticate($credintials)) {
+            return redirect()->route('admin.index');
+        } else {
+            return redirect()->back();
+        }
+    }
+
+    public function logout()
+    {
+        Sentinel::logout();
+        return redirect()->route('admin.login');
     }
 }

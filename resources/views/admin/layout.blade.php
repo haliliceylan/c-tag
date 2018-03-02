@@ -36,7 +36,7 @@
       <nav class="navbar navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="{{route('admin.dashboard')}}" class="navbar-brand"><b>Connection</b>Tag</a>
+            <a href="{{route('admin.dashboard')}}" class="navbar-brand"><b>Connection</b> Tags</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>
@@ -51,13 +51,14 @@
           <!-- Navbar Right Menu -->
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <!-- The user image in the navbar-->
-                  <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">Alexander Pierce</span>
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle">
+                  <img src="/lte/dist/img/avatar5.png" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Halil İbrahim Ceylan</span>
                 </a>
               </li>
+              <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
             </ul>
           </div>
           <!-- /.navbar-custom-menu -->

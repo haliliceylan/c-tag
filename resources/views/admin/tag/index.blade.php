@@ -27,7 +27,7 @@
               @endforeach
               <td>
                 <a class="btn btn-flat btn-info" href="{{route('admin.tag.show',$datax->id)}}"><i class="fa fa-area-chart"></i></a>
-                <!-- <a class="btn btn-flat btn-warning" href="{{route('admin.tag.edit',$datax->id)}}"><i class="fa fa-edit"></i></a> -->
+                <a class="btn btn-flat btn-warning" href="{{route('admin.tag.edit',$datax->id)}}"><i class="fa fa-edit"></i></a>
               </td>
             </tr>
             @endforeach

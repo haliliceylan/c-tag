@@ -23,5 +23,6 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
         Route::get('/logout', 'AdminPageController@logout')->name('logout');
         Route::get('/', 'AdminPageController@index')->name('index');
         Route::resource('/tag', 'ConnectionTagController',['parameters' => ['tag' => 'connectionTag'],'only' => ['index','show','edit','update']]);
+        Route::get('/tag/{connectionTag}/reset','ConnectionTagController@reset')->name('tag.reset');
     });
 });

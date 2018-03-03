@@ -24,7 +24,7 @@ class ConnectionTagController extends Controller
           ],
           'datas' => ConnectionTag::all(),
         ];
-        return view('admin.tag.index',compact('table'));
+        return view('admin.tag.index', compact('table'));
     }
 
     /**
@@ -105,7 +105,7 @@ class ConnectionTagController extends Controller
      */
     public function edit(ConnectionTag $connectionTag)
     {
-        //
+        return view('admin.tag.edit', ['tag' => $connectionTag]);
     }
 
     /**
@@ -117,7 +117,9 @@ class ConnectionTagController extends Controller
      */
     public function update(Request $request, ConnectionTag $connectionTag)
     {
-        //
+        $connectionTag->fill($request->all());
+        $connectionTag->save();
+        return back();
     }
 
     /**
@@ -129,5 +131,11 @@ class ConnectionTagController extends Controller
     public function destroy(ConnectionTag $connectionTag)
     {
         //
+    }
+
+    public function reset(ConnectionTag $connectionTag)
+    {
+        $connectionTag->actions()->delete();
+        return back();
     }
 }

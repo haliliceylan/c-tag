@@ -97,6 +97,10 @@
 @section('js')
 <script src="/lte/bower_components/raphael/raphael.min.js"></script>
 <script src="/lte/bower_components/morris.js/morris.min.js"></script>
+<!-- Morris.js charts -->
+<!-- DataTables -->
+<script src="/lte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 @endsection
 @section('js_code')
 <script>

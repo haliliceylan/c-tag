@@ -105,10 +105,6 @@
 <script src="/lte/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="/lte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<!-- DataTables -->
-<script src="/lte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 @yield('js')
 <!-- FastClick -->
 <script src="/lte/bower_components/fastclick/lib/fastclick.js"></script>

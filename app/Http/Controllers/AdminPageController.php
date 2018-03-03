@@ -27,7 +27,7 @@ class AdminPageController extends Controller
           'table' => (object)[
             'title' => 'Tüm Girişler',
             'columns' => (object) [
-              (object)['name' => 'created_at', 'label' => 'Tarih'],
+              (object)['name' => 'turkish_date', 'label' => 'Tarih'],
               (object)['name' => 'browser_name', 'label' => 'Tarayıcı Adı'],
               (object)['name' => 'browser_family', 'label' => 'Tarayıcı Ailesi'],
               (object)['name' => 'browser_version', 'label' => 'Tarayıcı Versiyon'],

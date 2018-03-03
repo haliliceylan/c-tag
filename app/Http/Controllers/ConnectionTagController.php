@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\ConnectionTag;
 use Illuminate\Http\Request;
+use App\Action;
+use \DB;
 
 class ConnectionTagController extends Controller
 {
@@ -14,7 +16,15 @@ class ConnectionTagController extends Controller
      */
     public function index()
     {
-        //
+        $table = (object)[
+          'title' => 'Connection Tag Listesi',
+          'columns' => [
+            (object)['label' => 'ID','name' => 'id'],
+            (object)['label' => 'Hedef URL','name' => 'action_url'],
+          ],
+          'datas' => ConnectionTag::all(),
+        ];
+        return view('admin.tag.index',compact('table'));
     }
 
     /**
@@ -46,7 +56,44 @@ class ConnectionTagController extends Controller
      */
     public function show(ConnectionTag $connectionTag)
     {
-        //
+      $platforms = Action::where('connection_tag_id',$connectionTag->id)->groupBy('platform_family')->select('platform_family', DB::raw('count(*) as count'))->get();
+      $pf = [];
+      $pf_color = ['#e6194b','#3cb44b','#ffe119','#0082c8','#f58231','#911eb4','#46f0f0','#f032e6','#d2f53c','#fabebe','#008080','#e6beff','#aa6e28','#fffac8','#800000','#aaffc3','#808000','#ffd8b1','#000080','#808080','#FFFFFF','#000000'];
+      foreach ($platforms as $platform) {
+          $pf[] = ['label' => $platform->platform_family,'value'=>$platform->count];
+      }
+      $data = (object) [
+        'chart' => (object)[
+          'title' => 'İşletim Sistemine Göre',
+          'json' => json_encode($pf),
+          'json_color' => json_encode($pf_color),
+        ],
+        'table' => (object)[
+          'title' => 'Tüm Girişler',
+          'columns' => (object) [
+            (object)['name' => 'created_at', 'label' => 'Tarih'],
+            (object)['name' => 'browser_name', 'label' => 'Tarayıcı Adı'],
+            (object)['name' => 'browser_family', 'label' => 'Tarayıcı Ailesi'],
+            (object)['name' => 'browser_version', 'label' => 'Tarayıcı Versiyon'],
+            (object)['name' => 'browser_engine', 'label' => 'Tarayıcı Motoru'],
+            (object)['name' => 'platform_name', 'label' => 'Platform İsmi'],
+            (object)['name' => 'platform_family', 'label' => 'Platform Ailesi'],
+            (object)['name' => 'platform_version', 'label' => 'Platform Version'],
+            (object)['name' => 'device_family', 'label' => 'Cihaz Ailesi'],
+            (object)['name' => 'device_model', 'label' => 'Cihaz Modeli'],
+            (object)['name' => 'mobile_grade', 'label' => 'Mobil Puanı'],
+            (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
+          ],
+          'datas' => Action::where('connection_tag_id',$connectionTag->id)->orderBy('created_at', 'desc')->get(),
+        ],
+        'boxes' => [
+          (object)['color' => 'aqua mini-box','count' => Action::where('connection_tag_id',$connectionTag->id)->orderBy('created_at','desc')->first()->created_at,'icon' => 'ion ion-clock','title' => 'Son Etkileşim Zamanı','action' => route('admin.index')],
+          (object)['color' => 'yellow','count' => Action::where('connection_tag_id',$connectionTag->id)->count(),'icon' => 'ion ion-flash','title' => 'Toplam Etkileşim Sayısı','action' => route('admin.index')],
+          (object)['color' => 'red','count' => Action::where('connection_tag_id',$connectionTag->id)->where('platform_family', 'Android')->count(),'icon' => 'fa fa-android','title' => 'Android','action' => route('admin.index')],
+          (object)['color' => 'green','count' => Action::where('connection_tag_id',$connectionTag->id)->where('platform_family', 'iOS')->count(),'icon' => 'fa fa-apple','title' => 'IOS','action' => route('admin.index')],
+        ],
+      ];
+      return view('admin.analyze', compact('data'));
     }
 
     /**

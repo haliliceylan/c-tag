@@ -3,7 +3,7 @@
 @endsection
 @section('content')
 <div class="row">
-  <div class="col-md-offset-2 col-md-8 col-xs-6">
+  <div class="col-md-offset-2 col-md-8 col-xs-12">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
@@ -16,7 +16,7 @@
             </div>
               </div>
         </div>
-  <div class="col-md-offset-2 col-md-8">
+  <div class="col-md-offset-2 col-md-8 col-xs-12">
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Tag Düzenle</h3>

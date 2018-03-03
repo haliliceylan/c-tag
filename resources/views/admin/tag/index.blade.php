@@ -37,6 +37,7 @@
               @foreach($table->columns as $column)
               <th>{{$column->label}}</th>
               @endforeach
+              <th>Aksiyonlar</th>
             </tr>
           </tfoot>
         </table>

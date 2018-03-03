@@ -10,6 +10,6 @@ class ConnectionTag extends Model
 
     public function actions()
     {
-        $this->hasMany('App\Action');
+        return $this->hasMany('App\Action');
     }
 }

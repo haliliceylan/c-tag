@@ -3,79 +3,38 @@
 @endsection
 @section('content')
 <div class="row">
-  <div class="col-md-6">
-    <!-- DONUT CHART -->
-    <div class="box box-danger">
-      <div class="box-header with-border">
-        <h3 class="box-title">{{$data->chart->title}}</h3>
-
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
-      </div>
-      <div class="box-body chart-responsive">
-        <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
-      </div>
-      <!-- /.box-body -->
-    </div>
-    <!-- /.box -->
-  </div>
-  <div class="col-md-6">
-    <?php $x=0; ?>
-    <div class="row">
-    @foreach($data->boxes as $box)
-    @if($x % 2 == 0)
-    </div>
-    <div class="row">
-    @endif
-    <div class="col-lg-6 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-{{$box->color}}">
-            <div class="inner">
-              <h3>{{$box->count}}</h3>
-              <p>{{$box->title}}</p>
-            </div>
-            <div class="icon">
-              <i class="{{$box->icon}}"></i>
-            </div>
-            <a href="{{$box->action}}" class="small-box-footer">Daha Fazla Bilgi <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <?php $x++ ?>
-    @endforeach
-  </div>
-  </div>
-</div>
-<div class="row">
   <div class="col-md-12">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">{{$data->table->title}}</h3>
+        <h3 class="box-title">{{$table->title}}</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
         <table id="MRBH" class="table table-bordered table-striped">
           <thead>
             <tr>
-              @foreach($data->table->columns as $column)
+              @foreach($table->columns as $column)
               <th>{{$column->label}}</th>
               @endforeach
+              <th>Aksiyonlar</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($data->table->datas as $datax)
+            @foreach($table->datas as $datax)
             <tr>
-              @foreach($data->table->columns as $column)
+              @foreach($table->columns as $column)
               <td><?=$datax->{$column->name}?></td>
               @endforeach
+              <td>
+                <a class="btn btn-flat btn-info" href="{{route('admin.tag.show',$datax->id)}}"><i class="fa fa-area-chart"></i></a>
+                <!-- <a class="btn btn-flat btn-warning" href="{{route('admin.tag.edit',$datax->id)}}"><i class="fa fa-edit"></i></a> -->
+              </td>
             </tr>
             @endforeach
           </tbody>
           <tfoot>
             <tr>
-              @foreach($data->table->columns as $column)
+              @foreach($table->columns as $column)
               <th>{{$column->label}}</th>
               @endforeach
             </tr>
@@ -91,18 +50,8 @@
 @section('css')
 <!-- DataTables -->
 <link rel="stylesheet" href="/lte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-<!-- Morris charts -->
-<link rel="stylesheet" href="/lte/bower_components/morris.js/morris.css">
-<style>
-div.mini-box h3{
-  font-size: 22px;
-  padding-bottom: 16px;
-}
-</style>
 @endsection
 @section('js')
-<script src="/lte/bower_components/raphael/raphael.min.js"></script>
-<script src="/lte/bower_components/morris.js/morris.min.js"></script>
 <!-- Morris.js charts -->
 <!-- DataTables -->
 <script src="/lte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -139,13 +88,5 @@ $('#MRBH').DataTable({
 			}
 		}
   })
-//DONUT CHART
-var donut = new Morris.Donut({
-  element: 'sales-chart',
-  resize: true,
-  colors: {!!$data->chart->json_color!!},
-  data: {!!$data->chart->json!!},
-  hideHover: 'auto'
-});
 </script>
 @endsection

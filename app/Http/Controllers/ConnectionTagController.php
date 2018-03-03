@@ -117,9 +117,12 @@ class ConnectionTagController extends Controller
      */
     public function update(Request $request, ConnectionTag $connectionTag)
     {
-        $connectionTag->fill($request->all());
-        $connectionTag->save();
-        return back();
+      if($connectionTag->action_url != $request->action_url){
+          $this->reset($connectionTag);
+      }
+      $connectionTag->fill($request->all());
+      $connectionTag->save();
+      return back();
     }
 
     /**

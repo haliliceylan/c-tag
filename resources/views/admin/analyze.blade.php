@@ -34,7 +34,7 @@
           <!-- small box -->
           <div class="small-box bg-{{$box->color}}">
             <div class="inner">
-              <h3>{{$box->count}}</h3>
+              <h3>{!!$box->count!!}</h3>
               <p>{{$box->title}}</p>
             </div>
             <div class="icon">
@@ -95,8 +95,7 @@
 <link rel="stylesheet" href="/lte/bower_components/morris.js/morris.css">
 <style>
 div.mini-box h3{
-  font-size: 22px;
-  padding-bottom: 16px;
+  font-size: 19.3px;
 }
 </style>
 @endsection

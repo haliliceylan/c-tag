@@ -10,4 +10,8 @@ class Action extends Model
     {
         return $this->belongsTo('App\ConnectionTag');
     }
+
+    public function getTurkishDateAttribute(){
+      return $this->created_at->format("d-m-Y H:i:s");
+    }
 }

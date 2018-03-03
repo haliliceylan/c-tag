@@ -56,6 +56,7 @@ class ConnectionTagController extends Controller
      */
     public function show(ConnectionTag $connectionTag)
     {
+      $lastTouch = Action::where('connection_tag_id',$connectionTag->id)->orderBy('created_at','desc')->first();
       $platforms = Action::where('connection_tag_id',$connectionTag->id)->groupBy('platform_family')->select('platform_family', DB::raw('count(*) as count'))->get();
       $pf = [];
       $pf_color = ['#e6194b','#3cb44b','#ffe119','#0082c8','#f58231','#911eb4','#46f0f0','#f032e6','#d2f53c','#fabebe','#008080','#e6beff','#aa6e28','#fffac8','#800000','#aaffc3','#808000','#ffd8b1','#000080','#808080','#FFFFFF','#000000'];
@@ -87,7 +88,7 @@ class ConnectionTagController extends Controller
           'datas' => Action::where('connection_tag_id',$connectionTag->id)->orderBy('created_at', 'desc')->get(),
         ],
         'boxes' => [
-          (object)['color' => 'aqua mini-box','count' => Action::where('connection_tag_id',$connectionTag->id)->orderBy('created_at','desc')->first()->created_at,'icon' => 'ion ion-clock','title' => 'Son Etkileşim Zamanı','action' => route('admin.index')],
+          (object)['color' => 'aqua mini-box','count' => $lastTouch->created_at->format("d-m-Y")."<br>".$lastTouch->created_at->format("H:i:s"),'icon' => 'ion ion-clock','title' => 'Son Etkileşim Zamanı','action' => route('admin.index')],
           (object)['color' => 'yellow','count' => Action::where('connection_tag_id',$connectionTag->id)->count(),'icon' => 'ion ion-flash','title' => 'Toplam Etkileşim Sayısı','action' => route('admin.index')],
           (object)['color' => 'red','count' => Action::where('connection_tag_id',$connectionTag->id)->where('platform_family', 'Android')->count(),'icon' => 'fa fa-android','title' => 'Android','action' => route('admin.index')],
           (object)['color' => 'green','count' => Action::where('connection_tag_id',$connectionTag->id)->where('platform_family', 'iOS')->count(),'icon' => 'fa fa-apple','title' => 'IOS','action' => route('admin.index')],

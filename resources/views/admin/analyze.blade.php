@@ -60,7 +60,7 @@
           <thead>
             <tr>
               @foreach($data->table->columns as $column)
-              <th>{{$column->label}}</th>
+              <th class="dt-center">{{$column->label}}</th>
               @endforeach
             </tr>
           </thead>
@@ -68,7 +68,7 @@
             @foreach($data->table->datas as $datax)
             <tr>
               @foreach($data->table->columns as $column)
-              <td><?=$datax->{$column->name}?></td>
+              <td class="dt-center"><?=$datax->{$column->name}?></td>
               @endforeach
             </tr>
             @endforeach
@@ -76,7 +76,7 @@
           <tfoot>
             <tr>
               @foreach($data->table->columns as $column)
-              <th>{{$column->label}}</th>
+              <th class="dt-center">{{$column->label}}</th>
               @endforeach
             </tr>
           </tfoot>
@@ -97,6 +97,7 @@
 div.mini-box h3{
   font-size: 19.3px;
 }
+th.dt-center, td.dt-center { text-align: center; }
 </style>
 @endsection
 @section('js')

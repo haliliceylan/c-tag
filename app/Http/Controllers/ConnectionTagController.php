@@ -6,6 +6,7 @@ use App\ConnectionTag;
 use Illuminate\Http\Request;
 use App\Action;
 use \DB;
+use QrCode;
 
 class ConnectionTagController extends Controller
 {
@@ -19,8 +20,8 @@ class ConnectionTagController extends Controller
         $table = (object)[
           'title' => 'Connection Tag Listesi',
           'columns' => [
-            (object)['label' => 'ID','name' => 'id'],
-            //(object)['label' => 'Hedef URL','name' => 'action_url'],
+            (object)['label' => 'ID','name' => 'ctag_id'],
+            (object)['label' => 'Etkileşim Adresi','name' => 'action_url'],
           ],
           'datas' => ConnectionTag::all(),
         ];
@@ -141,5 +142,12 @@ class ConnectionTagController extends Controller
     {
         $connectionTag->actions()->delete();
         return back();
+    }
+
+    public function qrcode(ConnectionTag $connectionTag){
+      return response(QrCode::format('png')
+      ->size(500)
+      ->generate(route('tag_action',$connectionTag->id)))
+      ->header('Content-Type', 'image/png');
     }
 }

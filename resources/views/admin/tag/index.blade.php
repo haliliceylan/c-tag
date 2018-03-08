@@ -28,6 +28,7 @@
               <td>
                 <a class="btn btn-flat btn-info" href="{{route('admin.tag.show',$datax->id)}}"><i class="fa fa-area-chart"></i></a>
                 <a class="btn btn-flat btn-warning" href="{{route('admin.tag.edit',$datax->id)}}"><i class="fa fa-edit"></i></a>
+                <a class="btn btn-flat btn-primary" href="{{route('admin.tag.qrcode',$datax->id)}}" onclick="qrcode(this.href);return false"><i class="fa fa-qrcode"></i></a>
               </td>
             </tr>
             @endforeach
@@ -89,5 +90,10 @@ $('#MRBH').DataTable({
 			}
 		}
   })
+</script>
+<script>
+function qrcode(url){
+  window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=500')
+}
 </script>
 @endsection

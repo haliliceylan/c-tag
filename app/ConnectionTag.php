@@ -12,4 +12,9 @@ class ConnectionTag extends Model
     {
         return $this->hasMany('App\Action');
     }
+
+    public function getCtagIdAttribute()
+    {
+        return str_pad($this->id, 5, "0",STR_PAD_LEFT);
+    }
 }

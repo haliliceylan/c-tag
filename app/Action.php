@@ -18,6 +18,6 @@ class Action extends Model
 
     public function getCtagIdAttribute()
     {
-        return str_pad($this->connection_tag_id, 5, "0",STR_PAD_LEFT);
+        return $this->connection_tag->ctag_id;
     }
 }

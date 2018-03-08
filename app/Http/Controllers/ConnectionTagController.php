@@ -20,7 +20,7 @@ class ConnectionTagController extends Controller
           'title' => 'Connection Tag Listesi',
           'columns' => [
             (object)['label' => 'ID','name' => 'id'],
-            (object)['label' => 'Hedef URL','name' => 'action_url'],
+            //(object)['label' => 'Hedef URL','name' => 'action_url'],
           ],
           'datas' => ConnectionTag::all(),
         ];

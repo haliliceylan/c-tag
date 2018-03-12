@@ -8,7 +8,7 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#website" data-toggle="tab" aria-expanded="true">Website</a></li>
-              <li class=""><a href="#wifi" data-toggle="tab" aria-expanded="false">Wifi</a></li>
+              <li class=""><a href="#wifi" data-toggle="tab" aria-expanded="false">Wi-Fi</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="website">
@@ -27,7 +27,7 @@
                   <!-- text input -->
                   <div class="form-group">
                     <label>SSID</label>
-                    <input name="ssid" type="text" class="form-control" placeholder="peakloop">
+                    <input name="ssid" type="text" class="form-control" placeholder="PeakLoop">
                   </div>
                   <!-- select -->
                   <div class="form-group">
@@ -41,7 +41,7 @@
                   <!-- text input -->
                   <div class="form-group">
                     <label>Parola</label>
-                    <input name="password" type="text" class="form-control" placeholder="12345">
+                    <input name="password" type="text" class="form-control" placeholder="Password">
                   </div>
                   <!-- checkbox -->
                   <div class="form-group">

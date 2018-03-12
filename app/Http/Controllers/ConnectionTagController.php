@@ -86,6 +86,7 @@ class ConnectionTagController extends Controller
             (object)['name' => 'device_model', 'label' => 'Cihaz Modeli'],
             (object)['name' => 'mobile_grade', 'label' => 'Mobil Puanı'],
             (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
+            (object)['name' => 'coming_from', 'label' => 'Etkileşim Tipi'],
           ],
           'datas' => $connectionTag->actions()->orderBy('created_at', 'desc')->get(),
         ],
@@ -147,7 +148,7 @@ class ConnectionTagController extends Controller
     public function qrcode(ConnectionTag $connectionTag){
       return response(QrCode::format('png')
       ->size(500)
-      ->generate(route('tag_action',$connectionTag->id)))
+      ->generate(route('tag_action',[$connectionTag->id,1])))
       ->header('Content-Type', 'image/png');
     }
 }

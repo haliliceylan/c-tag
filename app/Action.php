@@ -20,4 +20,15 @@ class Action extends Model
     {
         return $this->connection_tag->ctag_id;
     }
+
+    public function getComingFromAttribute()
+    {
+        switch ($this->from_type) {
+        case 1:
+        return "QC-Code";
+        case 0:
+        default:
+        return "NFC";
+      }
+    }
 }

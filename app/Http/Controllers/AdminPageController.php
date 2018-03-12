@@ -40,6 +40,7 @@ class AdminPageController extends Controller
               (object)['name' => 'device_model', 'label' => 'Cihaz Modeli'],
               (object)['name' => 'mobile_grade', 'label' => 'Mobil Puanı'],
               (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
+              (object)['name' => 'coming_from', 'label' => 'Etkileşim Tipi'],
             ],
             'datas' => Action::orderBy('created_at', 'desc')->get(),
           ],

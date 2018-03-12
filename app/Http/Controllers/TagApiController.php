@@ -9,7 +9,7 @@ use Browser;
 
 class TagApiController extends Controller
 {
-    public function runAction(Request $request, ConnectionTag $connectionTag)
+    public function runAction(Request $request, ConnectionTag $connectionTag, $qccode = 0)
     {
         //new Action
         $action = new Action;
@@ -26,6 +26,9 @@ class TagApiController extends Controller
         $action->device_model = Browser::deviceModel();
         $action->mobile_grade = Browser::mobileGrade();
         $action->connection_tag_id = $connectionTag->id;
+        if ($qccode != 0) {
+            $action->from_type = 1; // coming from qr code
+        }
         $action->save();
         //redirect user
         return redirect($connectionTag->action_url);

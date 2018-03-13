@@ -41,6 +41,8 @@ class AdminPageController extends Controller
               (object)['name' => 'mobile_grade', 'label' => 'Mobil Puanı'],
               (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
               (object)['name' => 'coming_from', 'label' => 'Etkileşim Tipi'],
+              (object)['name' => 'acceptable_country', 'label' => 'Kabul Edilen Dil ve Ülke'],
+              (object)['name' => 'acceptable_country_flag', 'label' => 'Bayrak'],
             ],
             'datas' => Action::orderBy('created_at', 'desc')->get(),
           ],

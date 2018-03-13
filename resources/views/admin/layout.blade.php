@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="/lte/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="/lte/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Flag Icons-->
+  <link rel="stylesheet" href="/lte/css/flag-icon.min.css">
   @yield('css')
   <!-- Theme style -->
   <link rel="stylesheet" href="/lte/dist/css/AdminLTE.min.css">

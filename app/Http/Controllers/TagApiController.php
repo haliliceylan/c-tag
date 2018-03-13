@@ -26,9 +26,14 @@ class TagApiController extends Controller
         $action->device_model = Browser::deviceModel();
         $action->mobile_grade = Browser::mobileGrade();
         $action->connection_tag_id = $connectionTag->id;
+        //detect coming from
         if ($qccode != 0) {
             $action->from_type = 1; // coming from qr code
         }
+        //detect from accept language
+        $language = $request->server('HTTP_ACCEPT_LANGUAGE');
+        $language = explode(",",explode(";",$language)[0])[0];
+        $action->acceptable_country = $language;
         $action->save();
         //redirect user
         return redirect($connectionTag->action_url);

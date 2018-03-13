@@ -31,4 +31,9 @@ class Action extends Model
         return "NFC";
       }
     }
+
+    public function getAcceptableCountryFlagAttribute(){
+      $flag = (count(explode("-",$this->acceptable_country)) == 2) ? strtolower(explode("-",$this->acceptable_country)[1]) : "";
+      return '<span class="flag-icon flag-icon-'.$flag.'"></span>';
+    }
 }

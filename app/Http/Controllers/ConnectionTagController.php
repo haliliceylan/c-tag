@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Action;
 use \DB;
 use QrCode;
+use Storage;
 
 class ConnectionTagController extends Controller
 {
@@ -149,7 +150,9 @@ class ConnectionTagController extends Controller
 
     public function qrcode(ConnectionTag $connectionTag){
       return response(QrCode::format('png')
-      ->size(500)
+      ->size(2000)
+      ->errorCorrection('H')
+      ->merge(Storage::path('logo.png'),.4,true)
       ->generate(route('tag_action',[$connectionTag->id,1])))
       ->header('Content-Type', 'image/png');
     }

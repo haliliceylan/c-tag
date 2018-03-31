@@ -3,6 +3,7 @@
 @endsection
 @section('content')
 <div class="row">
+  @if(isset($data->chart))
   <div class="col-md-6">
     <!-- DONUT CHART -->
     <div class="box box-danger">
@@ -22,6 +23,8 @@
     </div>
     <!-- /.box -->
   </div>
+  @endif
+  @if(isset($data->boxes))
   <div class="col-md-6">
     <?php $x=0; ?>
     <div class="row">
@@ -47,6 +50,7 @@
     @endforeach
   </div>
   </div>
+  @endif
 </div>
 <div class="row">
   <div class="col-md-12">
@@ -140,6 +144,7 @@ $('#MRBH').DataTable({
 		}
   })
 //DONUT CHART
+@if(isset($data->chart))
 var donut = new Morris.Donut({
   element: 'sales-chart',
   resize: true,
@@ -147,5 +152,6 @@ var donut = new Morris.Donut({
   data: {!!$data->chart->json!!},
   hideHover: 'auto'
 });
+@endif
 </script>
 @endsection

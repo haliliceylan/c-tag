@@ -17,3 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/tag/{connectionTag}/{qccode?}', 'TagApiController@runAction')->name('tag_action');
+Route::post('/order','OrderController@action')->name('order_action');

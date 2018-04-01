@@ -12,5 +12,6 @@ class OrderController extends Controller
       $a = new Order();
       $a->fill($request->all());
       $a->save();
+      return redirect("/ridvan/ordercomp.html");
     }
 }

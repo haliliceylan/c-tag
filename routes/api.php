@@ -16,4 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/tag/{connectionTag}/show','Api\ConnectionTagController@show')->name('show_tag');
 Route::get('/tag/{connectionTag}/{qccode?}', 'TagApiController@runAction')->name('tag_action');

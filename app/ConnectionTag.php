@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ConnectionTag extends Model
 {
     protected $fillable = ['action_url'];
-
+    protected $hidden = ['id','created_at','updated_at'];
     public function actions()
     {
         return $this->hasMany('App\Action');

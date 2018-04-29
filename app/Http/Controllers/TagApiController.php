@@ -36,6 +36,6 @@ class TagApiController extends Controller
         $action->acceptable_country = $language;
         $action->save();
         //redirect user
-        return redirect($connectionTag->action_url);
+        return redirect()->away($connectionTag->action_url);
     }
 }

@@ -1,0 +1,157 @@
+body{
+	text-align:center;
+}
+
+#anaKapsul{
+	margin:0 auto;
+	width:100%;
+}
+
+#anaKapsul p{
+	margin:0;
+}
+
+h1{
+	font:bold 14px 'AvenirNext', Tahoma, Geneva, sans-serif;
+	color: #8f8f8f;
+	margin:0;
+	padding:0;
+}
+
+select{
+	font:11px 'AvenirNext', Tahoma, Geneva, sans-serif;
+}
+
+table{
+	width:100%;
+	font: 12px 'AvenirNext', Tahoma, Geneva, sans-serif;
+	color:#000;
+	border-bottom: 3px solid #ccc;
+}
+
+table th{
+    border: 1px solid #ccc;
+    padding: 14px !important;
+    text-align: center;
+    font: 14px "AvenirNext",Tahoma,Geneva,sans-serif;
+}
+
+
+
+table tr.odd{
+	background-color:#FFF;
+
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+a{
+	color:#878582;
+	font:11px 'AvenirNext', Tahoma, Geneva, sans-serif;
+}
+
+/* cercevesi tablo */
+
+table.bos{
+	border:none;
+}
+
+table.bos td, table.bos th{
+	border:none;
+}
+
+table.bos table td {
+    border: 1px solid #ccc;
+
+}
+
+table td .buton{
+	background: #ff6b3a;
+	font: bold 10px 'AvenirNext', Tahoma, Geneva, sans-serif-webkit-body;
+	border:none;
+	color:#fff;
+    cursor:hand;
+    cursor: pointer;
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	vertical-align: top;
+	font-size: 12px;
+}
+
+td.excel a{
+	text-decoration:none;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+
+table td {
+    border: 1px solid #ccc;
+    padding: 14px !important;
+    text-align: center;
+    font: 12px "AvenirNext",Tahoma,Geneva,sans-serif;
+    white-space: nowrap;
+}
+
+.main_title {
+    color: #FFF;
+    background-color: #8F8F8F;
+    text-align: center;
+    padding: 14px;
+    vertical-align: middle;
+    font-weight:bold;
+}
+
+.sub_title {
+    background-color: #afafaf;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+		font-weight: bold;
+}
+
+.sub_sub_title {
+    background-color: #F6F6F6;
+    color: #717170;
+    text-align: left;
+    vertical-align: middle;
+		font-weight: bold;
+}
+
+.content_middle {
+    background-color: #FFF;
+    color: #000;
+    text-align: center;
+}
+
+.content_left {
+    background-color: #FFF;
+    color: #000;
+    text-align: left;
+}
+
+.empty_cell {
+    border: none;
+}
+
+table.bos table td.excel {
+    border:none;
+}
+
+table tr.yil td {
+	background: none repeat scroll 0 0 #8f8f8f;
+    color: #FFFFFF;
+    font-weight:bold;
+}
+.donem .sub_sub_title {
+    background-color: #f0f0f0;
+    color: #9E0E23;
+    font-weight: bold;
+}
+.donem .content_left {
+   background-color: #f0f0f0;
+    color: #9E0E23;
+    font-weight:bold;
+}

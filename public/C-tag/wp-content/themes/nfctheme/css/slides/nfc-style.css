@@ -1,0 +1,325 @@
+/* ===== Primary Styles ========================================================
+Author: Kaan Vurgun
+Twitter: @immortalcain
+========================================================================== */
+
+/* 
+* Tools
+*******************/
+@import url('../tools.css');
+
+
+/* 
+* Fonts (import please)
+*******************/
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Regular.svg#AvenirNext') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot');
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Bold.svg#AvenirNext') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+* Body
+*******************/
+html, body { height: 100%; -webkit-overflow-scrolling: touch; }
+html { -webkit-font-smoothing: antialiased; }
+body { background: #f2f4f7; font-family: 'AvenirNext', Helvetica, Arial; }
+.container { width: 990px; margin: 0 auto; }
+.overlay { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 8; display: none; }
+#main { min-height: 100%; height: auto !important; height: 100%; margin-bottom: -150px; }
+
+/* 
+* Header
+*******************/
+header { position: fixed; z-index: 99; width: 100%; }
+header #h-holder { position: relative; width: 990px; margin: 0 auto; }
+header #header-top { background: #fff url('../../images/nfc/header-bg.png.html') repeat-x left top; width: 100%; height: 89px; position: relative; z-index: 1000; display: none; }
+header #pull-btn { background: url('../../images/nfc/bkm-buton-kapali.png.html') no-repeat left -1px; width: 147px; height: 31px; display: block; margin: 0 auto; position: relative; z-index: 2;}
+header #pull-btn.up { background: url('../../images/nfc/bkm-buton-acik.png.html') no-repeat left -1px; }
+header #header-top #logo { background: url('../../images/nfc/logo.png.html') no-repeat left top; width: 85px; height: 52px; margin: 18px 0 0 0; float: left; } 
+header #header-top #top-menu { float: left; font-weight: bold; margin: 0 0 0 10px; }
+header #header-top #top-menu .dropdown-list > a { color: #696b70; font-size: 12px; float: left; margin: 0; display: block; height: 89px; padding: 0 10px; line-height: 93px; text-decoration: none; text-align: center; border-left: 1px solid transparent; border-right: 1px solid transparent; border-top-width: 0; border-bottom-width: 0; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; -ms-transition: all 0.3s ease-in; }
+header #header-top #top-menu .dropdown-list > a span { float: left; }
+header #header-top #top-menu .dropdown-list > a .arrow-down { width: 0;  height: 0;  border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 3px solid #696b70; float: left; margin: 44px 0 0 5px; }
+header #header-top #top-menu .dropdown-list > a:hover, header #header-top #top-menu > .dropdown-list > .active > a { background: url('../../images/nfc/menu-hover.png-v2.html') repeat-x left top; border-left-color: #dfdfdf; border-right-color: #dfdfdf; }
+header #header-top #top-menu .dropdown-list { float: left; }
+header #header-top #search-box { float: right; margin: 30px 0 0 0; position: relative; width: 130px; height: 50px;}
+header #header-top #search-box > input[type="text"] { width: 64px; border-radius: 30px; height: 29px; border: 1px solid #e1e1e1; margin: 0; box-shadow: none; padding: 5px 50px 3px 15px; font-size: 12px; position: absolute; left: 0; top: 0; z-index: 0;}
+header #header-top #search-box > input[type="submit"] { background: url('../../images/nfc/submit-btn.png.html') no-repeat; width: 42px; height: 37px; display: block !important; border: none; top: 1px; position: absolute; right: 0; z-index: 9; }
+header #header-top #top-menu .dropdown-list > .menu-dropdown { background: url('../../images/nfc/transparent.png.html') repeat left top; width: 100%; min-height: 50px; position: absolute; z-index: 9; top: 89px; left: 0; display: none; }
+header #header-top #top-menu .dropdown-list.active > .menu-dropdown { display: block; }
+
+header .menu-dropdown nav { overflow: hidden; line-height: 30px; padding: 10px 0 5px;}
+header .menu-dropdown nav a { color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; display: block; float: left; margin: 0 15px 0 0;}
+header .menu-dropdown nav a i { width: 0;  height: 0;  border-left: 3px solid #fff; border-bottom: 3px solid transparent; border-right: 3px solid transparent; border-top: 3px solid transparent; float: left; margin: 10px 0px 0 0; float: left;}
+header .menu-dropdown nav a span { float: left; margin: 0 0 0 5px; }
+
+
+/* 
+* Parallax Content
+*******************/
+.parallax-page .ghost-footer { margin-top: 0; }
+#parallax-container { height: 13800px; overflow: hidden; }
+#parallax-container.v2 { height: 13000px; }
+.parallax-content { overflow: hidden; position: fixed; width: 100%; height: 350px; padding: 200px 0 200px 0; top: 0; left: 0; }
+.parallax-content .text-area { width: 705px; height: 242px; margin: -150px 0 0 -350px; position: absolute; top: 10%; left: 50%; text-align: center; }
+.parallax-content .text-area h3 { font-size: 42px; font-weight: bold; margin-bottom: 25px; line-height: 48px; }
+.parallax-content .text-area p { font-size: 20px; line-height: 26px;  }
+.parallax-content .text-area p.small { font-size: 14px; line-height: 20px; }
+
+#parallax-intro { background: #9ec4cf; }
+#parallax-intro #hand-left { background: url('../../images/nfc/intro-hand.png') no-repeat left top; width: 257px; height: 656px; position: absolute; top: 100%; left: 50%; margin: -45% 0 0 -470px; }
+#parallax-intro .text-area { width: 500px; right: 50%; left: auto; margin: -200px -500px 0 0; top: 50%; text-align: right; }
+#parallax-intro .text-area h3 { color: #1c5b6b; }
+#parallax-intro .text-area p { color: #fff; font-size: 20px; line-height: 24px; margin: 0px 0 20px 0; font-weight: bold; }
+#parallax-intro .text-area p.small { color: #ffffff; font-size: 16px; line-height: 20px; margin: 0px 0 0 0; font-weight: normal; }
+#parallax-intro #nfc-bottom { width: 500px; bottom: 40px; position: absolute; left: 50%; margin: 0 0 0 0; text-align: left;}
+#parallax-intro #nfc-bottom h4 { color: #1c5b6b; font-size: 26px; line-height:30px; }
+#parallax-intro #nfc-bottom p { color: #fff; font-size: 20px; line-height: 24px; margin: 0px 0 20px 0; }
+#parallax-intro #nfc-bottom .intro-arrow { background: url('../../images/nfc/intro-arrow.png') no-repeat left top; width: 52px; height: 52px; margin: 0 0 0 0; position: absolute; top: 10px; right: 0; display: block; }
+
+#nfc.parallax-content { background: #a1e8a8; }
+#nfc-text h3 { color: #3B5F3F; }
+#nfc-text p { color: #213327; }
+#nfc-text p:last-child { font-size: 18px; line-height: 24px; }
+#phone { background: url('../../images/nfc/el.png') no-repeat; background-position: 100% 0; width: 55%; height: 352px; position: absolute; top: 50%; margin-top: -150px; z-index: 1; }
+#pos { background: url('../../images/nfc/pos.png') no-repeat; background-position: 0 0; width: 55%; height: 303px; position: absolute; top: 50%; margin-top: -150px; }
+#connection { background: url('../../images/nfc/connection.gif.html') no-repeat left top; width: 43px; height: 68px; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -22px; opacity: 0; }
+
+#transition-control.parallax-content { background: url('../../images/nfc/blue-bg.jpg') repeat; padding-bottom: 290px; }
+#transition-area { position: absolute; left: 50%; bottom: -50%; margin: 0 0 0 -527px; }
+#transition-area .tbody { background: url('../../images/nfc/turnike.png') no-repeat center top; width: 1055px; height: 412px; position: relative; z-index: 1; } 
+#transition-area .door-holder { width: 780px; position: absolute; left: 50%; top: 76px; margin: 0 0 0 -390px; z-index: 0; }
+#transition-area .door-holder .left-block:nth-child(1) { background: url('../../images/nfc/turnike-kapi-sol.png') no-repeat left top; width: 96px; height: 246px; position: absolute; left: 87px;}
+#transition-area .door-holder .right-block:nth-child(2) { background: url('../../images/nfc/turnike-kapi-sag.png') no-repeat left top; width: 96px; height: 246px; position: absolute; left: 200px;}
+#transition-area .door-holder .left-block:nth-child(3) { background: url('../../images/nfc/turnike-kapi-sol.png') no-repeat left top; width: 96px; height: 246px; position: absolute; }
+#transition-area .door-holder .right-block:nth-child(4) { background: url('../../images/nfc/turnike-kapi-sag.png') no-repeat left top; width: 96px; height: 246px; position: absolute; }
+#transition-area .hand-phone {  }
+.hand-phone { background: url('../../images/nfc/dikey-el.png') no-repeat left top; width: 208px; height: 1021px; position: absolute; z-index: 2; left: 50%;  margin: 0 0 0 -104px; }
+#transition-text {  }
+#transition-text h3 { color: #bae6ff; margin-bottom: 25px; }
+#transition-text p { color: #FFFFFF; }
+
+#train-way { background: url('../../images/nfc/red-bg.jpg') repeat; padding-bottom: 290px; overflow: visible; }
+#train-way .train-layer { background: #7e1a1a url('../../images/nfc/metro-gecis.png') no-repeat left top; top: 0; left: 0; position: absolute; width: 100%; height: 1440px; margin: 0 0 0 -50%; }
+#train-way .text-area { color: #fff; width: 900px; top: 50%; margin: -200px -450px 0 0; left: auto; }
+#train-way .text-area h3 { color: #efb251; }
+#train-way .text-area p { color: #efb251; }
+#train-way .text-area p.small { color: #ecdcc1; font-size: 16px; line-height: 24px;}
+#train-way #train { background: url('../../images/nfc/metro.png') no-repeat left top; width: 1995px; height: 234px; top: 50%; right: -150%; position: absolute; margin: -115px 0 0 0;  }
+
+#ticket-machine { background: #d394dc; }
+#ticket-machine .text-area {  }
+#ticket-machine .text-area h3 {
+    margin-bottom: 15px;
+  }
+#ticket-machine .text-area p {  }
+
+#wending-machine { background: #7bb3ea; }
+#wending-machine .inner { width: 1000px; margin: 0 auto; position: relative; height: 100%;}
+#wending-machine .text-area { width: 370px; text-align: left; left: 0%; top: 50%; margin: 50px 0 0 0;  }
+#wending-machine .text-area h3 { color: #2e6ba7; } 
+#wending-machine .text-area p { color: #fff; }
+#wending-machine #machine { width: 426px; height: 547px; position: absolute; right: 0; margin: 0 0 0 0;}
+#wending-machine #machine .machine-layer-1 { background: url('../../images/nfc/otomat.png') no-repeat left top; width: 426px; height: 547px; position: absolute; top: 0; left: 0; z-index: 2; }
+#wending-machine #machine .machine-layer-2 { background: url('../../images/nfc/urunler.png') no-repeat left top; width: 232px; height: 394px; position: absolute; z-index: 1; left: 25px; top: 60px;}
+#wending-machine #machine .machine-layer-3 { background: url('../../images/nfc/sut.png') no-repeat left top; width: 35px; height: 55px; position: absolute; top: 86px; left: 128px; z-index: 1; }
+
+#data-transfer { background: #55e1e3; }
+#data-transfer #hand-1 { background: url('../../images/nfc/el.png') no-repeat; width: 50%; height: 352px; position: absolute; top: 50%; margin-top: -150px; z-index: 1; left: -150%; background-position: 100% 0; margin-left: -200px;}
+#data-transfer #hand-2 { background: url('../../images/nfc/ikinci-el.png') no-repeat; width: 50%; height: 352px; position: absolute; top: 50%; margin-top: -150px; right: -150%; z-index: 1; background-position: 0 0; margin-right: -200px;}
+#data-transfer #data-arrow { background: url('../../images/nfc/transfer.gif') no-repeat left top; width: 372px; height: 488px; position: absolute; top: 50%; left: 50%; margin: -240px 0 0 -185px; z-index: 8; }
+#data-transfer .text-area { width: 372px; margin: -100px 0 0 -186px; position: absolute; left: 50%; z-index: 9; top: 50%; }
+#data-transfer .text-area h3 { color: #274365; }
+#data-transfer .text-area p { color: #274365; }
+#data-transfer .text-area p.small {
+    font-size: 16px;
+ 
+    line-height: 20px;
+}
+
+#car-park { background: #202d44; }
+#car-park .text-area { color: #fff; top: 30%;}
+#car-park #car { background: url('../../images/nfc/araba.png') no-repeat left top; width: 613px; height: 244px; position: absolute; top: 60%; margin: -60px 0 0 -291px; z-index: 1; }
+#car-park #park-area { background: url('../../images/nfc/park-yeri.png') no-repeat left top; width: 977px; height: 283px; position: absolute; top: 60%; margin: 0px -488px 0 0; }
+#car-park #park-meter { background: url('../../images/nfc/parkmetre.png') no-repeat left top; width: 243px; height: 614px; position: absolute; right: 50%; margin-right: -450px; z-index: 1; }
+#car-park .text-area h3 { color: #b5ebff; }
+#car-park .text-area p { color: #3c9bbe; }
+#car-park .hand-phone { margin-left: 200px; }
+
+#ad-action { background: #c03b12; }
+#ad-action .text-area { color: #fff; top: 15%; width: 900px; margin-left: -450px; }
+#ad-action .text-area h3 { color: #efbe4c; }
+#ad-action .text-area p { color: #efbe4c; }
+#ad-action .text-area p.small { color: #f0cb97; font-size: 18px; line-height: 24px;}
+
+#ad-action #v-phone { background: url('../../images/nfc/telefon.png') no-repeat left top; width: 667px; height: 148px; position: absolute; bottom: 10%; left: 50%; margin: 0 0 0 -330px; z-index: 1; }
+#ad-action #phone-shadow { background: url('../../images/nfc/telefon-golge.png') no-repeat left top; width: 822px; height: 206px; position: absolute; top: 70%; left: 50%; margin: 0 0 0 -410px; }
+#ad-action .iconholder { position: absolute; width: 660px; top: 50%; left: 50%; height: 200px; margin: -40px 0 0 -330px; z-index: 3; }
+#ad-action .iconholder #icon1 { background: url('../../images/nfc/info.png') no-repeat left top; width: 74px; height: 88px; position: absolute; left: 80px; top: 40px; z-index: 3; }
+#ad-action .iconholder #icon2 { background: url('../../images/nfc/pusula.png') no-repeat left top; width: 78px; height: 92px; position: absolute; left: 170px; top: 120px; z-index: 3; }
+#ad-action .iconholder #icon3 { background: url('../../images/nfc/hediye.png') no-repeat left top; width: 74px; height: 71px; position: absolute; left: 280px; top: 90px; z-index: 3; }
+#ad-action .iconholder #icon4 { background: url('../../images/nfc/takvim.png') no-repeat left top; width: 78px; height: 80px; position: absolute; left: 400px; top: 120px; z-index: 3; }
+#ad-action .iconholder #icon5 { background: url('../../images/nfc/muzik.png') no-repeat left top; width: 72px; height: 70px; position: absolute; left: 520px; top: 70px; z-index: 3; }
+
+#ticket-machine {  }
+#ticket-machine .inner { width: 1000px; margin: 0 auto; position: relative; height: 100%;}
+#ticket-machine #t-machine { background: url('../../images/nfc/bilet-otomat.png') no-repeat left top; width: 425px; height: 496px; top: 50%; left: 0; position: absolute; margin: -250px 0 0 0; }
+#ticket-machine #t-image { background: url('../../images/nfc/bilet.png') no-repeat left top; width: 61px; height: 75px; position: absolute; top: 253px; left: 156px; }
+#ticket-machine #popcorn { background: url('../../images/nfc/patlamis-misir.png') no-repeat left top; width: 209px; height: 248px; position: absolute; top: 50%; left: 325px; margin: 25px 0 0 0;}
+#ticket-machine #popcorn #p1 { background: url('../../images/nfc/patlamis-misir-sol.png') no-repeat 50% 50%; width: 50px; height: 50px; position: absolute; top: 50%; left: 0; margin: -150px 0 0 0; }
+#ticket-machine #popcorn #p2 { background: url('../../images/nfc/patlamis-misir-orta.png') no-repeat 50% 50%; width: 50px; height: 50px; position: absolute; top: 50%; left: 90px; margin: -205px 0 0 0; }
+#ticket-machine #popcorn #p3 { background: url('../../images/nfc/patlamis-misir-sag.png') no-repeat 50% 50%; width: 50px; height: 50px; position: absolute; top: 50%; left: 175px; margin: -130px 0 0 0; }
+#ticket-machine .text-area { color: #fff; top: 50%; text-align: right; width: 400px; left: auto; right: 0; }
+#ticket-machine .text-area h3 {  }
+#ticket-machine .text-area p {  }
+#ticket-machine .text-area p.small {
+    font-size: 16px;
+  
+    line-height: 22px;
+}
+.connect {
+    position: absolute;
+    right: 0;
+    top: 70px;
+}
+
+#finish { background: #fff; padding-top: 150px; }
+#finish .text-area2 { position: absolute; left: 50%; width: 900px; margin-left: -450px; }
+#finish .text-area2 p { color: #e9513d; font-size: 32px !important; font-weight: bold; text-align: center; }
+#finish .dvm-btn { background: #e9513d; color:#fff; border-radius: 30px; width: 240px; height: 50px; text-align: center; display: block; margin: 50px auto; line-height: 52px; font-weight: bold; text-decoration: none;}
+
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes amex {
+    from { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(30deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+
+/* NAV */
+
+.nav .thumb {
+    width: 0;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.56);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF,endColorstr=#50FFFFFF); 
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: width 800ms ease;
+-moz-transition: width 800ms ease;
+-ms-transition: width 800ms ease;
+-o-transition: width 800ms ease;
+transition: width 800ms ease;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+    margin-top: -8px;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    left: 140%;
+}
+
+.nav li:hover .thumb {
+    width: auto;
+    cursor: pointer;
+    padding: 6px;
+}
+.nav {
+  top: 50%;
+  height: 240px;
+  margin-top:-120px;
+  position: fixed;
+  z-index: 999999;
+  left: 20px;
+}
+.nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav li {
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.nav li a {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-indent: -999em; /* make the text accessible to screen readers */
+    cursor: pointer;
+    position: absolute;
+}
+
+.nav li a:focus {
+    outline: none;
+}
+
+.nav li a {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px white;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav li a.active {
+    box-shadow: inset 0 0 0 8px white;
+    /*box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6)*/
+}
+
+.lt-ie9 .nav li a {background: url("../../images/nfc/mdot.png.html");width: 17px;height: 17px;}
+.lt-ie9 .nav li a:hover,
+.lt-ie9 .nav li a:focus,
+.lt-ie9 .nav li a.active {background: url("../../images/nfc/mdot-a.png.html");}
+
+.nav li.current a {
+    box-shadow: inset 0 0 0 8px white;
+}
+.bkm-orj {width: 181px; height: 57px; z-index: 999999; position: fixed; left: 130px; bottom: 30px; display: block; background: rgba(0, 0, 0,0.5); border-radius: 33px; color: #fff; text-align: center; line-height: 57px;}
+.bkm-orj:hover{color: #fff;background: rgba(0, 0, 0,0.6);text-decoration: none;}

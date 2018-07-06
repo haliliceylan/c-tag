@@ -1,0 +1,1633 @@
+/* ===== Primary Styles ========================================================
+Author: Kaan Vurgun
+Twitter: @immortalcain
+========================================================================== */
+
+/* 
+* Tools
+*******************/
+@import url('../tools.css');
+@import url('../animate.min.css');
+@import url('../validator.css');
+
+
+/* 
+* Fonts (import please)
+*******************/
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Regular.svg#AvenirNext') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot');
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Bold.svg#AvenirNext') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* 
+* Body
+*******************/
+html, body { height: 100%; }
+html { -webkit-font-smoothing: antialiased; }
+body { background: #f2f4f7; font-family: 'AvenirNext', Helvetica, Arial; }
+.container { width: 990px; margin: 0 auto; }
+.overlay { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 8; display: none; }
+#main { min-height: 100%; height: auto !important; height: 100%; margin-bottom: -150px; }
+
+
+/* 
+* Parallax Content
+*******************/
+.parallax-page .ghost-footer { margin-top: 0; }
+#parallax-container { height: 8000px; overflow: hidden; }
+#parallax-container.v2 { height: 20000px; }
+.parallax-content { overflow: hidden; position: fixed; width: 100%; height: 350px; padding: 200px 0 200px 0; top: 0; left: 0; }
+.parallax-content .text-area { width: 705px; height: 242px; margin: 0 0 0 -350px; position: absolute; top: 10%; left: 50%; text-align: center; }
+.parallax-content .text-area h3 { font-size: 42px; font-weight: bold; margin-bottom: 25px; line-height: 48px; }
+.parallax-content .text-area p { font-size: 20px; line-height: 26px;  }
+.parallax-content .text-area p.small { font-size: 14px; line-height: 20px; }
+
+/* Bay Bay Nakit Parallax */
+#parallax-intro { background: #fff; }
+#parallax-1 { background: #8d4747; }
+.parallax-content.v2 { color: #fff; }
+.parallax-content.v2 .text-area h3 { margin-bottom: 0; }
+.parallax-content.v2 .text-area p {  }
+
+
+/* ===== "Kart Bilinci" parallax page styles =============================
+Author: Batuhan Icoz
+Twitter: @batuhanicoz
+========================================================================== */
+
+#parallax-container {
+	
+	height: 25000px;
+}
+#kb-p0 {
+	background: #a7bc2d;
+	text-align: center; 
+}
+#kb-p0 h3 { color: #55610d; text-align: left; font-size: 38px; margin-bottom: 25px; margin-top: -20px;}
+#kb-p0 p { color: #e2ec96; font-weight: bold; font-size: 22px !important; line-height: 26px !important; width: 100%; }
+#kb-p0 .bottom-text {
+    position: absolute;
+  
+    bottom: 70px;
+    color: #fff;
+}
+
+.parallax-content .text-area { width: 1000px; height: 242px; margin: 0 0 0 -500px; }
+
+
+#kb-p0 .content-inner {
+	position: absolute;
+	width: 800px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -400px;
+}
+
+#kb-p0-headtext {
+	background: url('../../images/kartbilinci/kb-p0-headtext.png.html') no-repeat left top;
+	width: 248px;
+	height: 37px;
+	left: 50%;
+	top: 5%;
+	position: absolute;
+	margin: 0 0 0 -124px;
+}
+	
+#kb-p0-subtext {
+	background: url('../../images/kartbilinci/kb-p0-subtext.png.html') no-repeat left top;
+	width: 583px;
+	height: 42px;
+	top: 15%;
+	margin: 0 0 0 -291px;
+	left: 50%;
+	position: absolute;
+}
+
+#kb-p0 .text-area { width: 400px; left: 0; position: absolute; top: 10%; margin: 0 0 0 0; text-align: left;}
+
+#kb-p0-pos {
+	background: url('../../images/kartbilinci/pos-2.png') no-repeat left top;
+	width: 343px;
+	height: 574px;
+	right: 0;
+	top: 50%;
+	margin: -350px 0 0 0;
+	position: absolute;
+}
+
+#kb-p0-bottomtext {
+	background: url('../../images/kartbilinci/kb-p0-bottomtext.png.html') no-repeat left top;
+	width: 339px;â€†
+	height: 39px;
+	height: 39px;
+	left: 50%;
+	margin: 0 0 0 -170px;
+	position: absolute;
+	top: 85%;
+}
+
+#kb-p0-circle {
+	background: url('../../images/kartbilinci/kb-p0-circle.png') no-repeat left top;
+	width: 52px;
+	height: 51px;
+	left: 50%; 
+	margin: 0 0 -33px -26px; position: absolute;
+
+}
+
+#kb-p1 {
+	background: #87296a;
+}
+
+#kb-p1 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+
+#kb-p1 .text-area {
+	text-align: left;
+	width: 405px; height: 300px; 
+	margin: -200px 0 0 0; position: absolute; top: 50%; left: 0; 
+}
+
+
+#kb-p1 #purse {
+	background: url('../../images/kartbilinci/canta.PNG') no-repeat right top;
+	width: 523px;
+	height: 342px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	margin: -170px 0 0 -262px;
+}
+
+#kb-p1 #handwithcard {
+	background: url('../../images/kartbilinci/el.PNG') no-repeat right top;
+	width: 984px;
+	height: 266px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 35%;
+	right: -1200px;
+	margin: 50px 0 0 -492px;
+}
+
+#kb-p2 {
+	background: #cfe5d5;
+	z-index:-10;
+	color: #1f5134;
+}
+
+#kb-p2 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+#kb-p2 .text-area {
+	text-align: left;
+	width: 575px; height: 300px; 
+	margin: -250px 0 0 0; position: absolute; 
+	top: 50%; left: 0; 
+}
+
+#kb-p2 .text-area h3 {
+	margin-bottom: 35px;	
+}
+
+#kb-p2 #moneyonplatform-money {
+	background: url('../../images/kartbilinci/02-para.png') no-repeat right top;
+	width: 163px;
+	height: 180px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 45%;
+	left: 35%;
+	margin: 50px 0 0 -82px;
+}
+
+#kb-p2 #moneyonplatform-platform {
+	background: url('../../images/kartbilinci/02-rampa.png') no-repeat right top;
+	width: 235px;
+	height: 86px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 85%;
+	left: 35%;
+	margin: 32px 0 0 -115px;
+}
+
+#kb-p2 #whipguy-head {
+	background: url('../../images/kartbilinci/02-kafa.png') no-repeat right top;
+	width: 153px;
+	height: 139px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 18%;
+	left: 95%;
+	margin: 32px 0 0 -206px;
+}
+
+#kb-p2 #whipguy-guy {
+	background: url('../../images/kartbilinci/02-adam.png') no-repeat right top;
+	width: 431px;
+	height: 562px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	margin: 10px 0 0 -46px;
+}
+
+#kb-p3 {
+	background: #ffb600;
+	z-index:-10;
+	color: #577489;
+}
+
+#kb-p3 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+#kb-p3 .text-area {
+	text-align: left;
+	/* width: 360px; */ height: 300px; 
+	margin: -250px 0 0 0; position: absolute; 
+	top: 70%; left: 0; 
+}
+
+#kb-p3 #globe-creditcard {
+	background: url('../../images/kartbilinci/03-kart.png') no-repeat right top;
+	width: 470px;
+	height: 268px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 43%;
+	right: 0;
+	z-index: 2;
+	margin: 34px 0 0 -235px;
+	
+}
+#kb-p3 .text-area h3 {
+	margin-bottom: 15px;	
+}
+
+#kb-p3 #globe {
+	background: url('../../images/kartbilinci/dunya.PNG') no-repeat left top;
+	width: 587px;
+	height: 443px;
+	right: 0;
+	position: absolute;
+	z-index: 1;
+	top: 70%;
+	margin: -294px 0 0 -294px;
+}
+#kb-p3 .text-area {
+	top: 70%;
+}
+#kb-p3 .text-area h3 { margin-bottom: 15px;}
+#kb-p3 .text-area p {
+    /* width: 612px; */
+ 
+    width: 360px;
+}
+
+#kb-p3 #globe-pin1 {
+	background: url('../../images/kartbilinci/pin-01.PNG') no-repeat left top;
+	width: 69px;
+	height: 119px;
+	position: absolute;
+	margin: 40px 0 0 230px;
+}
+
+#kb-p3 #globe-pin2 {
+	background: url('../../images/kartbilinci/pin-02.PNG') no-repeat left top;
+	width: 35px;
+	height: 47px;
+	position: absolute;
+	margin: 25px 0 0 100px;
+}
+
+#kb-p3 #globe-pin3 {
+	background: url('../../images/kartbilinci/pin-03.PNG') no-repeat left top;
+	width: 54px;
+	height: 73px;
+	position: absolute;
+	margin: 50px 0 0 418px;
+}
+
+#kb-p3 #globe-pin4 {
+	background: url('../../images/kartbilinci/pin-04.PNG') no-repeat left top;
+	width: 45px;
+	height: 77px;
+	margin: 0 0 0 300px;
+	position: absolute;
+}
+
+/***
+***/
+
+#kb-p4 {
+	background: #b7b69f;
+	z-index:-10;
+	color: #6d360c;
+}
+
+#kb-p4 #wallet { top: 50%; left: 0; position: absolute; width: 555px; height: 455px; margin: -265px 0 0 -100px;}
+
+#kb-p4 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+
+#kb-p4 .text-area {
+	text-align: right;
+	width: 575px; height: 300px; 
+	margin: -250px 0 0 0; position: absolute; 
+	top: 70%; 
+	left: auto;
+}
+
+#kb-p4 #wallet-back {
+	background: url('../../images/kartbilinci/cuzdan-arka.PNG') no-repeat right top;
+	width: 376px;
+	height: 112px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 24%;
+	left: 137px;
+	z-index: 1;
+	margin: 0;
+	
+}
+
+#kb-p4 #wallet-innermoney {
+	background: url('../../images/kartbilinci/cuzdan-para.PNG') no-repeat right top;
+	width: 325px;
+	height: 211px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	left: 162px;
+	z-index: 1;
+	margin: 0;
+}
+
+#kb-p4 #wallet-wallet {
+	background: url('../../images/kartbilinci/cuzdan.PNG') no-repeat left top;
+	width: 649px;
+	height: 386px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	top: 30%;
+	left: 0;
+	z-index: 1;
+	margin: 0 0 0 0;
+	
+}
+
+/***
+***/
+#kb-p5 {
+	background: #22b573;
+	z-index:-10;
+	color: #056137;
+}
+
+#kb-p5 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+
+#kb-p5 .text-area {
+	text-align: left;
+	width: 540px; 
+	height: 286px; 
+	margin: -130px 0 0 0; position: absolute; 
+	top: 50%; 
+	left: 0;
+}
+
+#kb-p5 #envelope {
+	top: 50%;	
+
+	width: 500px;
+	height: 500px;
+	right: 0;
+	position: absolute;
+	margin: -71px 0 0 -50px;
+}
+#kb-p5 #envelope-back {
+	background: url('../../images/kartbilinci/zarf-arka.PNG') no-repeat right top;
+	width: 359px;
+	height: 228px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0 0 0 77px;
+}
+
+
+#kb-p5 #envelope-ticket {
+	background: url('../../images/kartbilinci/bilet.PNG') no-repeat right top;
+	width: 251px;
+	height: 251px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	z-index: 1;
+	margin: 15px 0 0 144px;
+}
+
+#kb-p5 #envelope-envelope {
+	background: url('../../images/kartbilinci/zarf.PNG') no-repeat right top;
+	width: 519px;
+	height: 262px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	z-index: 1;
+	margin: 124px 0 0 0;
+}
+
+#kb-p5 .text-area h3 { font-size: 35px; line-height: 40px; margin-bottom: 25px;}
+#kb-p5 .text-area p { }
+
+
+/***
+***/
+#kb-p6 {
+	background: #ec9980;
+	z-index:-10;
+	color: #6d360c;
+}
+
+#kb-p6 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+
+#kb-p6 .text-area {
+	text-align: left;
+	width: 540px; 
+	height: 320px; 
+	margin: -60px 0 0 0;
+	position: absolute; 
+	top: 50%; 
+	left: 0;
+	right: auto;
+}
+
+#kb-p6 #of-pos { /* // of: old-fashinoned */
+	right: 5%; 
+	
+	position: absolute;
+	margin: -355px 0 0 -100px;
+	background: url('../../images/kartbilinci/06-pos.PNG') no-repeat right top; width: 343px; height: 574px;
+}
+#kb-p6 #of-pos-side {
+	background: url('../../images/kartbilinci/06-slip.png.html') no-repeat right top;
+	width: 279px;
+	height: 199px;
+	right: 0;
+	position: absolute;
+	z-index: 0;
+	/* left: 0; */
+	z-index: 3;
+	margin: 0 0 0 0;
+	right: 0;
+	top: 157px;
+}
+
+
+#kb-p6 #of-pos-card {
+	z-index: 0;
+	background: url('../../images/kartbilinci/06-kart.png') no-repeat right top;
+	width: 153px;
+	height: 242px;
+	position: absolute;
+	z-index: -1;
+	margin: 0 94px 0 0;
+	right: 0;
+}
+
+#kb-p6 #of-pos-pos {
+	background: url('../../images/kartbilinci/06-pos.PNG') no-repeat right top;
+	width: 343px;
+	height: 574px;
+	position: absolute;
+	/* left: 0; */
+	/* z-index: 1; */
+	/* margin: -285px 0 0 0; */
+}
+#kb-p6 .text-area h3 { font-size: 35px; line-height: 40px; margin-bottom: 25px;}
+#kb-p6 .text-area h3.white { color: #ffffff; width: 150%;}
+#kb-p6 .text-area p { }
+
+/***
+***/
+#kb-p7 {
+	background: #e5dda3;
+	z-index:-10;
+	color: #6d360c;
+}
+
+#kb-p7 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+
+#kb-p7 .text-area {
+	text-align: left;
+	width: 540px; 
+	height: 215px; 
+	margin: -220px 0 0 0;
+	position: absolute; 
+	top: 45%; 
+	left: 0;
+	right: auto;
+}
+
+#kb-p7 #map {
+	width: 500px;
+	height: 500px;
+	right: -150px; 
+	position: absolute;
+	margin: -285px 0 0 0;
+}
+
+
+#kb-p7 #map-smallhouse-1, #kb-p7 #map-smallhouse-2, #kb-p7 #map-smallhouse-3, #kb-p7 #map-smallhouse-4 {
+	background: url('../../images/kartbilinci/07-ev.png') no-repeat left top;
+	width: 67px;
+	height:â€†63px;
+	position: absolute;
+}
+
+#kb-p7 #map-smallhouse-1 {
+    height: 63px;
+	
+    position: absolute;
+    top: 56%;
+    z-index: 2;
+    left: -44%;
+}
+
+#kb-p7 #map-smallhouse-2 {
+    height: 63px;
+	
+    top: 35%;
+    z-index: 2;
+    right: 55%;
+}
+
+#kb-p7 #map-smallhouse-3 {
+    height: 63px;
+	
+    top: 50%;
+    z-index: 2;
+    left: 26%;
+}
+
+#kb-p7 #map-smallhouse-4 {
+    height: 63px;
+	
+    position: absolute;
+    top: 58%;
+    z-index: 2;
+    right: 78%;
+}
+
+#kb-p7 #map-bighouse-1, #kb-p7 #map-bighouse-2, #kb-p7 #map-bighouse-3 {
+	background: url('../../images/kartbilinci/07-fabrika.png') no-repeat left top;
+	width: 78px;
+	height:â€†77px;
+	position: absolute;
+}
+
+#kb-p7 #map-bighouse-1 {
+    height: 77px;
+	
+    /* top: 50%; */
+    z-index: 2;
+    top: 63%;
+    left: -14%;
+}
+
+#kb-p7 #map-bighouse-2 {
+    height: 77px;
+	
+    top: 41%;
+    z-index: 2;
+    left: 4%;
+}
+
+#kb-p7 #map-bighouse-3 {
+    height: 77px;
+	
+    top: 37%;
+    right: 34%;
+    z-index: 2;
+}
+
+#kb-p7 #map-bubble-1 {
+	background: url('../../images/kartbilinci/07-inek.png') no-repeat left top;
+	width: 111px;
+	height: 89px;	
+	top: 20%;
+	position: absolute;
+	right: 38%;
+	z-index: 2;
+}
+
+#kb-p7 #map-bubble-2 {
+	background: url('../../images/kartbilinci/07-traktor.png') no-repeat left top;
+	width: 108px;
+	height: 99px;
+	top: 43%;
+	z-index: 2;
+	position: absolute;
+	left: -21%;
+}
+
+#kb-p7 #map-map {
+	background:url('../../images/kartbilinci/07-harita.png') no-repeat left top;
+	width: 857px;
+	height: 410px;
+	top: 30%;
+	position: absolute;
+	margin: 0 0 0 0;
+	right: 0;
+}
+
+#kb-p7 .text-area h3 {
+	margin-bottom: 25px;
+}
+#kb-p7 .text-area p {
+    font-size: 18px;
+ }
+
+/***
+***/
+
+#kb-p8 {
+	background: #58c6c3;
+	color: #6d360c;
+}
+
+
+#kb-p8 .content-inner {
+	position: absolute;
+	width: 1000px;
+	height: 521px;
+	top: 50%;
+	left: 50%;
+	margin: -260px 0 0 -500px;
+}
+#kb-p8 .text-area h3 {
+    margin-bottom: 25px;
+}
+#kb-p8 .text-area p {
+    font-size: 18px;
+ }
+ 
+#kb-p8 #p8-holder {  }
+#kb-p8 #p8-holder #table { background: url('../../images/kartbilinci/08-tablo.png') no-repeat 0 0; width: 422px; height: 349px; position: absolute; top: 50%; left: 50%; z-index: 3; margin: -100px 0 0 -210px; }
+#kb-p8 #p8-holder #table-chart { background: url('../../images/kartbilinci/08-chart.png') no-repeat 0 0; width: 0; height: 187px; position: absolute; top: 61px; left: 60px; z-index: 3; margin: 0 0 0 0; }
+
+#kb-p8 #p8-holder #p8-1 { background: url('../../images/kartbilinci/08-oran1.png') no-repeat 0 0; width: 128px; height: 92px; position: absolute; top: 15px; left: -12px; z-index: 3; }
+#kb-p8 #p8-holder #p8-2 { background: url('../../images/kartbilinci/08-oran2.png') no-repeat 0 0; width: 127px; height: 92px; position: absolute; top: 69px; left: 37px; z-index: 3; }
+#kb-p8 #p8-holder #p8-3 { background: url('../../images/kartbilinci/08-oran3.png') no-repeat 0 0; width: 127px; height: 93px; position: absolute; top: 25px; left: 91px; z-index: 3; }
+#kb-p8 #p8-holder #p8-4 { background: url('../../images/kartbilinci/08-oran4.png') no-repeat 0 0; width: 127px; height: 93px; position: absolute; top: 86px; left: 155px; z-index: 3; }
+#kb-p8 #p8-holder #p8-5 { background: url('../../images/kartbilinci/08-oran5.png') no-repeat 0 0; width: 127px; height: 92px; position: absolute; top: 61px; left: 188px; z-index: 3; }
+#kb-p8 #p8-holder #p8-6 { background: url('../../images/kartbilinci/08-oran-son.png') no-repeat 0 0; width: 220px; height: 146px; position: absolute; top: 61px; right: -100px; z-index: 3; }
+
+
+
+/*#kb-p8 #table {
+	background: url('../../images/kartbilinci/08-tablo.png') no-repeat left top;
+	width: 481px;
+	height: 351px;
+	position: absolute;
+	left: 50%;
+	margin: -115px 0 0 -240px;
+}
+
+#kb-p8 #balloon {
+	background: url('../../images/kartbilinci/08-balon.png.html') no-repeat left top;
+	width: 171px;
+	height: 127px;
+	position: absolute;
+	top: 70%;
+	right: 20%;
+	margin: -175px 0 0 0;
+	z-index: 2;
+}
+
+#kb-p8 #chart {
+	background: url('../../images/kartbilinci/08-chart.png') no-repeat left top;
+	width: 470px;
+	height: 235px;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin: -30px -230px 0 0;
+	z-index: 5;
+}
+
+#kb-p8 #chart_overlay {
+	width: 0px;
+	height: 235px;
+	position: absolute;
+	top: 70%;
+	right: 33%;
+	margin: -175px 0 0 -240px;
+	z-index: 2;
+}*/
+
+#kb-p8 #chart_08 {
+	background: url('../../images/kartbilinci/08-chart.png') no-repeat left top;
+ 	width: 341px;
+ 	height: 187px;
+}
+#kb-p8 #oran-son_08 {
+ 	background: url('../../images/kartbilinci/08-oran-son.png') no-repeat left top;
+ 	width: 220px;
+ 	height: 146px;
+ 	
+}
+
+#kb-p8 #oran1_08 {
+ 	background: url('../../images/kartbilinci/08-oran1.png') no-repeat left top;
+ 	width: 128px;
+ 	height: 92px;
+}
+#kb-p8 #oran2_08 {
+background: url('../../images/kartbilinci/02-oran2.png.html') no-repeat left top;
+width: 128px;
+height: 92px;}
+#kb-p8 #oran3_08 {
+ 	background: url('../../images/kartbilinci/08-oran3.png') no-repeat left top;
+}
+
+#kb-p8 #oran4_08 {
+ 	background: url('../../images/kartbilinci/08-oran4.png') no-repeat left top;
+}
+
+#kb-p8 #oran5_08 {
+  	background: url('../../images/kartbilinci/08-oran5.png') no-repeat left top;
+}
+
+#kb-p8 #tablo_08 {
+ 	background: url('../../images/kartbilinci/08-tablo.png') no-repeat left top;
+}
+
+
+/* 09-adam.png */
+
+#kb-p9 {
+	background: #e8ece1 url('../../images/kartbilinci/p9bg.png') repeat-x;
+	color: #6d360c;
+}
+
+
+#kb-p9 .text-area h3 {
+    margin-bottom: 25px;
+}
+
+#kb-p9 .text-area {
+	width: 790px;
+	margin: 0 0 0 -395px;
+}
+
+#kb-p9 .text-area p { }
+
+#kb-p9 #guys {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin: -50px 0 0 -485px;
+}
+#kb-p9 #guys #guywithbags-1, #kb-p9 #guys #guywithbags-2, #kb-p9 #guys #guywithbags-3, #kb-p9 #guys #guywithbags-4, #kb-p9 #guys #guywithbags-5 {
+	background: url('../../images/kartbilinci/09-adam.png') no-repeat left top;
+	display: table-cell;
+	position: relative;
+	top: 50%;
+}
+
+#kb-p9 #guys #guywithbags-1 {
+	width: 192px;
+	height: 302px;
+	/*left: 10%;*/
+	-webkit-transform: scale(0.7,0.7);
+}
+
+#kb-p9 #guys #guywithbags-2 {
+	width: 192px;
+	height: 302px;
+	-webkit-transform: scale(0.5,0.5);
+	/*left: 10%;*/
+}
+
+#kb-p9 #guys #guywithbags-3 {
+	width: 192px;
+	height: 302px;
+	-webkit-transform: scale(1,1);
+	/*left: 10%;*/
+}
+
+#kb-p9 #guys #guywithbags-4 {
+	width: 203px;
+	height: 320px;
+	-webkit-transform: scale(0.6,0.6);
+	/*left: 10%;*/
+}
+
+#kb-p9 #guys #guywithbags-5 {
+	width: 192px;
+	height: 302px;
+	/*left: 10%;*/
+	-webkit-transform: scale(0.3,0.3);	
+}
+
+/***
+***/
+#kb-p10 {
+	
+	background: #c42d3f;
+	color: #ffffff;
+}
+
+#kb-p10 .text-area h3 {
+    margin-bottom: 25px;
+}
+
+#kb-p10 .text-area {
+	width: 790px;
+	margin: 0 0 0 -395px;
+}
+
+#kb-p10 .text-area p { }
+
+#kb-p10 #mc-bubble {
+    display: table;
+	
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -228px;
+    position: absolute;
+}
+#kb-p10 #mc-bubble-1 {
+	background: url('../../images/kartbilinci/10-blon1.png') no-repeat left top;
+	width: 168px;
+	height: 154px;
+	/* margin: 15px 0 0 250px; */
+	display: table-cell;
+	position: relative;
+	bottom: -10px;
+	left: -80px;
+}
+
+#kb-p10 #mc-bubble-2 {
+	background: url('../../images/kartbilinci/10-balon2.png') no-repeat left top;
+	width: 107px;
+	height: 95px;
+	display: table-cell;
+	margin: 0 0 0 0;
+	position: relative;
+	left: -126px;
+	bottom: 40px;
+}
+
+#kb-p10 #mc-bubble-3 {
+	background: url('../../images/kartbilinci/10-balon3.png') no-repeat left top;
+	width: 80px;
+	height: 75px;
+	display: table-cell;
+	position: relative;
+	/* margin: -100px 0 0 0; */
+	left: -290px;
+	bottom: 75px;
+}
+
+#kb-p10 #mc-bubble-phone {
+	background: url('../../images/kartbilinci/10-telefon.png') no-repeat left top;
+	width: 381px;
+	height: 275px;
+	display: table-cell;
+}
+
+#kb-p11 {
+	color: #602e17;
+	background: #dfd78a url('../../images/kartbilinci/11-bg.png') no-repeat center top;
+	background-size: cover;
+}
+
+#kb-p11 .text-area h3 {
+    margin-bottom: 25px;
+}
+
+#kb-p11 .text-area {
+	width: 790px;
+	margin: 0 0 0 -395px;
+}
+
+#kb-p11 .text-area p { }
+
+#kb-p11 #siren {
+	background: url('../../images/kartbilinci/11-bg.png') no-repeat left top;
+	transition: transform 1s linear; 
+	transform-origin: center center; 
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3D; 
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-name: rotate; 
+	-webkit-animation-duration: 1000ms; 
+	-webkit-animation-iteration-count: infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50%;
+}
+
+#kb-p11 #middlestuff {
+	
+}
+
+
+#kb-p11 #idcard {
+	background: url('../../images/kartbilinci/11-nufus.png') no-repeat left top;
+	height: 207px;
+	width: 244px;
+	left: 25%;
+	top: 50%;
+	margin: -10px 0 0 -100px;
+	position: absolute;
+}
+
+#kb-p11 #policebadge {
+	background: url('../../images/kartbilinci/11-polis.png') no-repeat left top;
+	height: 210px;
+	width: 162px;	
+	top: 50%;
+	position: absolute;
+	right: 25%;
+}
+
+#kb-p11 #sirendevice {
+	background: url('../../images/kartbilinci/11-siren.png') no-repeat left top;
+	height: 155px;
+	top: 50%;
+	width: 186px;
+	position: absolute;
+	left: 50%;
+	margin: -10px 0 0 -93px;
+}
+
+
+/***
+***/
+
+#kb-p12 {
+	background: #274c5c;
+	color: #68d5da;
+}
+#kb-p12 h3 { margin-bottom: 25px; }
+#kb-p12 #clock {
+	background: url('../../images/kartbilinci/12-saat.png') no-repeat left top;
+	height: 282px;
+	top: 50%;
+	width: 375px;
+	position: absolute;
+	left: 50%;
+	margin: -10px 0 0 -200px;
+}
+
+#kb-p12 #lock {
+	background: url('../../images/kartbilinci/12-kilit.png') no-repeat left top;
+	height: 245px;
+	top: 60%;
+	width: 225px;
+	position: absolute;
+	left: 55%;
+	z-index: 2;
+	margin: -10px 0 0 -93px;
+}
+
+#kb-p12 .text-area {
+	
+	width: 765px;
+	margin: 0 0 0 -382px
+}
+
+
+/***
+***/
+
+#kb-p13 {
+	background: #eccfa9;
+	color: #6a6172;
+}
+#kb-p13 h3 { margin-bottom: 25px; }
+#kb-p13 #middlestuff-13 {
+    width: 400px;
+	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -255px;
+    height: 400px;
+}
+#kb-p13 #atm {
+	background: url('../../images/kartbilinci/13-atm.png') no-repeat left top;
+	height: 334px;
+	top: 50%;
+	width: 287px;
+	position: absolute;
+	left: 55%;
+	margin: -33px 0 0 0;
+	z-index: -2;
+}
+
+#kb-p13 #women {
+    top: 50%;
+
+    position: absolute;
+    left: 35%;
+    width: 277px;
+    height: 366px;
+    margin: -50px 0 0 -140px;
+}
+
+#kb-p13 #women-body {
+	background: url('../../images/kartbilinci/13-kadin.png') no-repeat left top;
+	height: 366px;
+	width: 277px;
+	position: absolute;
+	left: 0;
+	margin: 0 0 0;	
+}
+
+#kb-p13 #women-arm {
+	background: url('../../images/kartbilinci/13-kol.png') no-repeat left top;
+	height: 56px;
+	width: 110px;
+	position: absolute;
+	right: 0;
+	margin: 0 0 0;
+	top: 115px;
+	z-index: -1;
+}
+
+#kb-p13 #women-sweat {
+	background: url('../../images/kartbilinci/13-ter.gif') no-repeat left top;
+	height: 50px;
+	width: 109px;
+	position: absolute;
+	margin: auto;
+	left: 91px;
+	top: 19px;
+}
+
+#kb-p14  {
+	background: #fbce2a;
+	color: #274c5c;
+}
+
+#kb-p14 h3 { margin-bottom: 25px; }
+#kb-p14 .text-area h3.white {
+	color: #ffffff;
+	margin-bottom: 0;
+}
+
+#kb-p14 #inputfield {
+	background: url('../../images/kartbilinci/14-balon.png') no-repeat left top;
+	width: 698px;
+	height: 230px;
+	top: 50%;
+	position: absolute;
+	left: 50%;
+	margin: 50px 0 0 -350px;
+}
+
+#kb-p14 #inputfield-star1, #kb-p14 #inputfield-star2, #kb-p14 #inputfield-star3, #kb-p14 #inputfield-star4 {
+	background: url('../../images/kartbilinci/14-sifre.png') no-repeat left top;
+	width: 43px;
+	height: 38px;
+	left: 25%;
+	top: 20%;
+	position: absolute;
+}
+#kb-p14 .text-area {
+	width: 890px;
+	margin: 0 0 0 -445px;
+}
+#kb-p14 #inputfield-star1 {
+	
+}
+
+#kb-p14 #inputfield-star2 {
+    margin-left: 87px;
+	
+}
+
+#kb-p14 #inputfield-star3 {
+    margin-left: 178px;
+	
+}
+
+#kb-p14 #inputfield-star4 {
+    margin-left: 269px;
+	
+}
+
+#kb-p15 {
+	background: #e0ba6e;
+	color: #274c5c;
+}
+#kb-p15 h3 { margin-bottom: 25px; }
+#kb-p15 #computer {
+	background: url('../../images/kartbilinci/15-bilgisayar.png') no-repeat left top;
+	width: 352px;
+	height: 320px;
+	margin: 0 0 0 -176px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#kb-p15 #lock2 {
+	background: url('../../images/kartbilinci/15-kilit.png') no-repeat left top;
+	width: 189px;
+	height: 234px;
+	margin: 0 0 0 -95px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+}
+
+#kb-p15 .text-area p {
+	
+}
+
+#kb-p16 {
+	background: #2e91cd;
+	color: #ffffff;
+}
+#kb-p16 h3 { margin-bottom: 25px; }
+#kb-p16 .text-area { width: 1000px; margin: 0 0 0 -500px; }
+
+#kb-p16 #middlestuff-16 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+}
+#kb-p16 #check {
+	background: url('../../images/kartbilinci/16-check1.png') no-repeat left top;
+	width: 93px;
+	height: 92px;
+	margin: 0 0 0 100px;
+	position: absolute;
+	/* top: 45%; */
+	/* left: 50%; */
+}
+
+#kb-p16 #check2 {
+
+	background: url('../../images/kartbilinci/16-check2.png') no-repeat left top;
+	width: 105px;
+	height: 83px;
+	
+
+	margin: 10px 0 0 95px;
+	position: absolute;
+	
+
+	/* top: 45%; */
+	
+
+	/* left: 50%; */
+}
+
+#kb-p16 #pencil {
+	background: url('../../images/kartbilinci/16-kalem.png') no-repeat left top;
+	width: 189px;
+	height: 234px;
+	margin: -50px 0 0 -55px;
+	position: absolute;
+	/* top: 33%; */
+	/* left: 57%; */
+	z-index: 3;
+}
+
+
+#kb-p16 #receipt {
+
+	background: url('../../images/kartbilinci/16-slip.png') no-repeat left top;
+	width: 640px;
+	height: 226px;
+	
+
+	margin: 0 0 0 -420px;
+	
+
+	position: absolute;
+	
+
+	/* top: 45%; */
+	
+
+	/* left: 0; */
+}
+
+
+#kb-p17 {
+	background: #aa91af;
+	color: #6d360c;
+}
+
+#kb-p17 h3 { margin-bottom: 25px; }
+
+#kb-p17 #lefthand {
+	background: url('../../images/kartbilinci/17-sol.png') no-repeat left top;
+	width: 52%;
+	height: 550px;	
+	top: 50%;
+	position: absolute;
+	margin: -253px 0 0 0;
+	background-position: 99% 0;
+}
+
+#kb-p17 #righthand {
+	background: url('../../images/kartbilinci/17-sag.png') no-repeat left top;
+	width: 50%;
+	height: 547px;
+	top: 50%;
+	position: absolute;
+	margin: -250px 0 0 0;
+	background-position: 0 0;
+}
+
+
+#kb-p18 {
+	background: #77ccc9;
+	color: #12445d;
+}
+
+#kb-p18 .text-area p {
+    font-size: 18px;
+}
+
+#kb-p18 .text-area h3 {
+	font-size: 30px;
+}
+#kb-p18 #laptop-18 {
+	background: url('../../images/kartbilinci/18_laptop.png') no-repeat left top;
+	width: 605px;
+	height: 358px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0px 0 0 -300px;
+}
+
+#kb-p18 #hands-18 {
+
+}
+
+#kb-p18 #lefthand-18 {
+	background: url('../../images/kartbilinci/18_sol_el.png') no-repeat left top;
+	width: 414px;
+	height: 462px;
+	position: absolute;
+	top: 66%;
+	left: 50%;
+	margin: 85px 0 0 -427px;
+}
+
+#kb-p18 #righthand-18 {
+	background: url('../../images/kartbilinci/18_sag_el.png') no-repeat left top;
+	width: 419px;
+	height: 394px;
+	position: absolute; 
+	top: 66%; 
+	right: 50%; 
+	margin: 85px -454px 0 0;
+}
+
+#kb-p19 {
+	background: #ffcb00;
+	color: #6d360c;
+}
+#kb-p19 h3 { margin-bottom: 25px; }
+
+#shrader { width: 463px; height: 188px; top:50%; left: 50%; margin: 0px 0 0 -231px; position: absolute;}
+#shrader .o-hid { overflow: hidden; position: absolute; height: 115px; width: 463px; top: 0;}
+#shrader .o-hid.v2 { overflow: hidden; position: absolute; height: 156px; width: 463px; top: 202px;}
+#shrader #machine { background: url('../../images/kartbilinci/19_shreader.png') no-repeat left top; width: 463px; height: 188px; top:50%; left: 50%; margin: 0 0 0 -231px; position: absolute;}
+#shrader #paper1 { background: url('../../images/kartbilinci/19_dosya_tam.png') no-repeat left top; width: 195px; height: 121px; top:50%; left: 50%; margin: -64px 0 0 -100px; position: absolute; z-index: 1;}
+#shrader #paper2 { background: url('../../images/kartbilinci/19_dosya_islenmis.png') no-repeat left top; width: 195px; height: 101px; top: 50%; left: 50%; margin: 0 0 0 -100px; position: absolute; z-index: 1;}
+
+
+
+#kb-p20 {
+	background: #fbecd5;
+	color: #6d360c;
+}
+
+#kb-p20 #image-hold-20 { position: absolute; top: 50%; left: 50%; width: 385px; height: 300px; margin: 0 0 0 -180px; }
+#kb-p20 #image-hold-20 #kilit-1 { background: url('../../images/kartbilinci/20-nufus.png') no-repeat left top; width: 230px; height: 230px; position: absolute; top: 0; left: 0; }
+#kb-p20 #image-hold-20 #kilit-2 { background: url('../../images/kartbilinci/20-kilit-1.png') no-repeat left top; width: 113px; height: 78px; position: absolute; top: 31px; left: 159px; z-index: 2; }
+#kb-p20 #image-hold-20 #kilit-3 { background: url('../../images/kartbilinci/20-kilit-2.png') no-repeat left top; width: 130px; height: 118px; position: absolute; top: 100px; left: 150px; z-index: 3;}
+#kb-p20 #image-hold-20 #kilit-4 { background: url('../../images/kartbilinci/20-kilit-3.png') no-repeat left top; width: 123px; height: 76px; position: absolute; top: 0px; right: 0px; z-index: 3;  }
+
+#kb-p21 {
+	background: #f68660;
+	color: #852f18;
+}
+
+#kb-p21 .text-area {
+	width: 800px;
+	top: 20%;
+	position: absolute;
+	margin: 0 0 0 -400px;
+}
+
+#kb-p21 .text-area h3 {
+	font-size: 35px;
+	margin-bottom: 0;
+	line-height: 65px;
+}
+#kb-p21 .text-area p {
+    font-size: 16px;
+}
+
+#kb-p21 #p21-holder { position: absolute; top: 50%; right: 0; width: 50%; height: 84px; margin: -40px 0 0 0; }
+#kb-p21 #hand-21 { background: url('../../images/kartbilinci/21_kol.png') no-repeat 0 0; width: 100%; height: 78px; position: absolute; top: 50%; right: 0; z-index: 3; margin: -40px -75px 0 0; }
+#kb-p21 #hand-21-2 { background: url('../../images/kartbilinci/21_el.png') no-repeat 0 0; width: 153px; height: 84px; position: absolute; top: 50%; left: 0; z-index: 2; margin: -71px 0 0 -54px;}
+#kb-p21 #paper-21 { background: url('../../images/kartbilinci/21_kagit.png') no-repeat 0 0; width: 85px; height: 72px; position: absolute; top: 50%; left: 0; z-index: 1; margin: -60px 0 0 -35px; }
+#kb-p21 #bin-21 { background: url('../../images/kartbilinci/21_bin.png') no-repeat 0 0; width: 153px; height: 250px; position: absolute; top: 50%; left: 50%; z-index: 1; margin: 80px 0 0 -77px; }
+#kb-p21 #x-21 { background: url('../../images/kartbilinci/21_carpi.png') no-repeat 0 0; width: 89px; height: 89px; position: absolute; top: 0; left: 50%; z-index: 1; margin: -5px 0 0 -45px; }
+
+#kb-p22 {
+	background: #68d5da;
+	color: #804f1c;
+}
+
+#kb-p22 .text-area {
+	width: 800px;
+	margin: 0 0 0 -400px;
+}
+
+#kb-p22 .text-area h3 {
+	font-size: 35px;
+	margin-bottom: 0;
+	line-height: 65px;
+}
+#kb-p22 .text-area p {
+    font-size: 16px;
+}
+
+#kb-p22 {  }
+#p22-holder { width: 800px; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -400px; height: 400px; }
+#kb-p22 #cloud-1 { background: url('../../images/kartbilinci/22-bulut1.png') no-repeat 0 0; width: 285px; height: 108px; position: absolute; top: 0; left: 0; z-index: 1; margin: 50px 0 0 0; }
+#kb-p22 #cloud-2 { background: url('../../images/kartbilinci/22-bulut2.png') no-repeat 0 0; width: 428px; height: 159px; position: absolute; top: 0; left: 170px; z-index: 2; margin: 150px 0 0 0; }
+#kb-p22 #cloud-3 { background: url('../../images/kartbilinci/22-bulut3.png') no-repeat 0 0; width: 221px; height: 81px; position: absolute; top: 0; right: 0px; z-index: 1; margin: 30px 0 0 0; }
+#kb-p22 #mail-1 {  background: url('../../images/kartbilinci/22-posta.png') no-repeat 0 0; width: 382px; height: 207px; position: absolute; top: 0;   right: 50%; z-index: 1;   margin: 0px -215px 0 0; }
+
+
+
+#kb-p23 {
+	background: #b89d7d;
+	color: #6d360c;
+}
+
+#kb-p23 .text-area {
+	width: 1000px;
+	height: 265px;
+	margin: 0 0 0 -500px;
+}
+
+
+#kb-p23 .text-area h3 { font-size: 40px; margin-bottom: 15px;}
+#kb-p23 .text-area p { font-size: 17px; }
+#kb-p23 #p23-holder { width: 618px; height: 500px; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -310px; }
+#kb-p23 #p23-1 { background: url('../../images/kartbilinci/23-yuzde.png') no-repeat 0 0; width: 391px; height: 277px; position: absolute; top: 0; left: 0; z-index: 1; margin: 0px 0 0 0; }
+#kb-p23 #p23-2 {  background: url('../../images/kartbilinci/23-adam.png') no-repeat 0 0; width: 363px; height: 311px; position: absolute; top: 0; right: 0; z-index: 1;   margin: -32px 0 0 0; }
+
+
+#kb-p24 {
+	background: #f2bb64 url('../../images/kartbilinci/p24-bg.png') 0 50% repeat-x;
+	color: #5b3e0f;
+}
+
+#kb-p24 .text-area { width: 500px; /* right: 0%; */ height: 280px; position: absolute; text-align: left; /* margin: 0 0 0 0; */ top: 15%;}
+#kb-p24 .text-area h3 { font-size: 40px; margin-bottom: 15px;}
+#kb-p24 .text-area p { font-size: 17px; }
+
+#kb-p24 .content-inner { width: 1000px; position: absolute; top: 20%; left: 50%; z-index: 1; margin: 0 0 0 -500px; }
+#kb-p24 #p24-holder {  width: 438px; height: 356px; position: absolute; top: 0; right: 0; } 
+#kb-p24 #p24-1 { background: url('../../images/kartbilinci/24-kadin.png') no-repeat 0 0; width: 438px; height: 356px; position: absolute; top: 0; right: 0; z-index: 1;   margin: 0 0 0 0;  }
+#kb-p24 #p24-2 { background: url('../../images/kartbilinci/24-kol.png') no-repeat 0 0; width: 138px; height: 105px; position: absolute; top: 251px; right: 180px; z-index: 0;   margin: 0 0 0 0;  }
+
+
+#kb-p25 {
+	background: #fdcaa1 url('../../images/kartbilinci/p25-bg.png') 0 50% repeat-x;
+	color: #ffffff;
+}
+#kb-p25 .text-area {
+	/* height: 900px; */
+	text-align: left;
+	width: 500px;
+	top: 31%;
+}
+#kb-p25 p {
+	font-size: 16px;
+}
+#kb-p25 #p25-holder { width: 400px; right: 0; top: 50%; margin: 80px -50px 0 0; position: absolute; height: 500px;}
+#kb-p25 #p25-1 { background: url('../../images/kartbilinci/25-bilgisayar.png') no-repeat 0 0; width: 547px; height: 312px; position: absolute; top: 50%; right: 50%; z-index: 0;   margin: -150px -470px 0 0;  }
+#kb-p25 #p25-2 {  background: url('../../images/kartbilinci/25-sol-kol.png') no-repeat 0 0; width: 124px; height: 462px; position: absolute; top: 0; left: 0; z-index: 0;   margin: 0 0 0 0;  }
+#kb-p25 #p25-3 {  background: url('../../images/kartbilinci/25-sag-kol.png') no-repeat 0 0; width: 90px; height: 506px; position: absolute; top: 0; right: 0; z-index: 0;   margin: 0 0 0 0;  }
+#kb-p26 {
+	background: #84296a;	
+	color: #ffffff;
+}
+
+#kb-p26 .text-area { width: 500px; right: 0%; height: 280px; position: absolute; text-align: left; margin: 0 0 0 0; }
+#kb-p26 .text-area h3 { font-size: 40px; margin-bottom: 15px;}
+#kb-p26 .text-area p { font-size: 17px; }
+
+#kb-p26 #p26-computer { background: url('../../images/kartbilinci/26-laptop.png') no-repeat 0 0; width: 640px; height: 293px; position: absolute; top: 50%; left: 50%; z-index: 0; margin: 0px 0 0 -620px; }
+#kb-p26 #p26-umbrella { background: url('../../images/kartbilinci/26-semsiye.png') no-repeat 0 0; width: 382px; height: 310px; position: absolute; top: 50%; left: 50%; z-index: 1; margin: -234px 0 0 -473px;  }
+
+.text-area h3 {
+	margin-bottom: 10px !important;	
+	font-size: 36px !important;	
+	line-height: 40px !important;	
+}
+.text-area p {	
+	font-size: 16px !important;	
+	line-height: 22px !important;	
+}
+
+#kb-p27 {
+	background: #e9513d;
+	color: #ffffff;
+}
+#kb-p27 .text-area p { color: #fff; font-size: 32px !important; font-weight: bold; text-align: center; }
+#kb-p27 .dvm-btn { background: #fff; color:#e9513d; border-radius: 30px; width: 240px; height: 50px; text-align: center; display: block; margin: 50px auto; line-height: 52px; font-weight: bold; text-decoration: none;}
+
+
+/* NAV */
+
+.nav .thumb {
+    width: 0;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.56);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF,endColorstr=#50FFFFFF); 
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: width 800ms ease;
+-moz-transition: width 800ms ease;
+-ms-transition: width 800ms ease;
+-o-transition: width 800ms ease;
+transition: width 800ms ease;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+    margin-top: -8px;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    left: 140%;
+}
+.nav li:hover .thumb {
+    width: auto;
+    cursor: pointer;
+    padding: 6px;
+}
+.nav {
+  top: 50%;
+  height: 240px;
+  margin-top:-120px;
+  position: fixed;
+  z-index: 999999;
+  left: 20px;
+}
+.nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav li {
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.nav li a {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-indent: -999em; /* make the text accessible to screen readers */
+    cursor: pointer;
+    position: absolute;
+}
+
+.nav li a:focus {
+    outline: none;
+}
+
+.nav li a {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px white;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav li a.active {
+    box-shadow: inset 0 0 0 8px white;
+    /*box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6)*/
+}
+
+.lt-ie9 .nav li a {background: url("../../images/kartbilinci/mdot.png.html");width: 17px;height: 17px;}
+.lt-ie9 .nav li a:hover,
+.lt-ie9 .nav li a:focus,
+.lt-ie9 .nav li a.active {background: url("../../images/kartbilinci/mdot-a.png.html");}
+
+.nav li.current a {
+    box-shadow: inset 0 0 0 8px white;
+}
+
+.bkm-orj {width: 181px; height: 57px; z-index: 999999; position: fixed; left: 130px; bottom: 30px; display: block; background: rgba(0, 0, 0,0.5); border-radius: 33px; color: #fff; text-align: center; line-height: 57px;}
+.bkm-orj:hover{color: #fff;background: rgba(0, 0, 0,0.6);text-decoration: none;}

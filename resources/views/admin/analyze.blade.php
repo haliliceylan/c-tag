@@ -63,6 +63,7 @@
         <table id="MRBH" class="table table-bordered table-striped">
           <thead>
             <tr>
+              <th class="dt-center">Blockchain Hash</th>
               @foreach($data->table->columns as $column)
               <th class="dt-center">{{$column->label}}</th>
               @endforeach
@@ -71,6 +72,9 @@
           <tbody>
             @foreach($data->table->datas as $datax)
             <tr>
+              <td class="dt-center">
+                <a class="btn btn-flat btn-danger" onclick="bcshow('{{$datax->blockchain_hash}}')"><i class="fa fa-chain"></i></a>
+              </td>
               @foreach($data->table->columns as $column)
               <td class="dt-center"><?=$datax->{$column->name}?></td>
               @endforeach
@@ -79,6 +83,7 @@
           </tbody>
           <tfoot>
             <tr>
+              <th class="dt-center">Blockchain Hash</th>
               @foreach($data->table->columns as $column)
               <th class="dt-center">{{$column->label}}</th>
               @endforeach
@@ -90,6 +95,34 @@
     </div>
     <!-- /.box -->
   </div>
+</div>
+<div class="modal fade" id="bchash">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Blockchain Anahtarını Görüntüle</h4>
+         </div>
+         <div class="modal-body">
+            <div>
+               <label>Blockchain Hash</label>
+               <input class="form-control input-lg" type="text" disabled="" id="bc_input">
+               <span class="help-block">Benzersiz Blockchain Anahtarınız Yukarıda Bulunmaktadır.</span>
+            </div>
+            </br>
+            <blockquote>
+               <p>Bir blok zinciri, veritabanındaki her bir kaydı temsil eden veri yapısıdır. Her hareket, gerçekliğini koruma altına almak adına dijital olarak imzalanır ve kimse bu kayda müdahale edemez.</p>
+               <small>Blockchain Nedir ? </small>
+            </blockquote>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Kapat</button>
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
 </div>
 @endsection
 @section('css')
@@ -153,5 +186,11 @@ var donut = new Morris.Donut({
   hideHover: 'auto'
 });
 @endif
+</script>
+<script type="text/javascript">
+function bcshow(hash){
+  $("#bc_input").val(hash)
+  $("#bchash").modal()
+}
 </script>
 @endsection

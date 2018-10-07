@@ -3,7 +3,7 @@
 @endsection
 @section('content')
 <div class="row">
-  @if(isset($data->char))
+  @if(isset($data->chart))
   <div class="col-md-6">
     <!-- DONUT CHART -->
     <div class="box box-danger">
@@ -24,7 +24,7 @@
     <!-- /.box -->
   </div>
   @endif
-  <div class="col-md-{{(isset($data->char) ? 6 : 12)}}">
+  <div class="col-md-{{(isset($data->chart) ? 6 : 12)}}">
     <?php $x=0; ?>
     <div class="row">
     @foreach($data->boxes as $box)
@@ -179,7 +179,7 @@ $('#MRBH').DataTable({
 		}
   })
 //DONUT CHART
-@if(isset($data->char))
+@if(isset($data->chart))
 var donut = new Morris.Donut({
   element: 'sales-chart',
   resize: true,

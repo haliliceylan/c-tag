@@ -1,0 +1,67 @@
+/* Wordpress Core */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+/* Sidebar Yok Template */
+
+#single-page #single-content.sidebar-yok .article-area { float: left; width: 900px; padding: 45px; color: #676767; font-size: 14px; }
+#single-page #single-content.sidebar-yok .article-area > h2 { margin: 0 0 30px; font-size: 22px; line-height: 26px; }
+#single-page #single-content.sidebar-yok .article-area > h3 { line-height: 32px; }
+#single-page #single-content.sidebar-yok .article-area > .lead { font-size: 22px; font-weight: 400; line-height: 26px; }
+#single-page #single-content.sidebar-yok .article-area > p { margin: 0 0 20px; }
+#single-page #single-content.sidebar-yok .article-area > h4 { font-size: 22px; margin: 0 0 25px; }
+
+/* Galeri */
+
+.gallery img {
+	border: none !important;
+}
+
+/* Kronoloji Sayfası */
+
+.page-template-page--chronology .year-detail p {
+	float: none !important;
+}
+
+.page-template-page--chronology .year-detail .img-hold {
+	margin: 0px 20px 0px 20px !important;
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	#single-page #single-content.sidebar-yok .article-area { width: 650px; }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 250px) and (max-width : 767px) {
+	#single-page #single-content.sidebar-yok .article-area { float: none; width: 260px; padding: 20px;}
+	#single-page #single-content.sidebar-yok .article-area > h3 { font-size: 17px; }
+}
+
+/* Subscribe 'clear field' IE button */
+ul.list-menu #ctl00_ContentPlaceHolder1_TakipEt_upNewsLater .takipet::-ms-clear {
+    display: none;
+}
+
+
+/* Faaliyet Raporları pdf-icon */
+
+.pdf-b-image .pdf-i { top: 0px; z-index: 8; }

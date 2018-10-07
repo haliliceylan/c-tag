@@ -1,0 +1,412 @@
+/* ===== Primary Styles ========================================================
+Author: Kaan Vurgun
+Twitter: @immortalcain
+========================================================================== */
+
+/* 
+* Tools
+*******************/
+@import url('../tools.css');
+
+
+/* 
+* Fonts (import please)
+*******************/
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Regular.svg#AvenirNext') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot');
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Bold.svg#AvenirNext') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* 
+* Body
+*******************/
+html, body { height: 100%; }
+html { -webkit-font-smoothing: antialiased; }
+body { background: #f2f4f7; font-family: 'AvenirNext', Helvetica, Arial; }
+.container { width: 990px; margin: 0 auto; }
+.overlay { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 8; display: none; }
+#main { min-height: 100%; height: auto !important; height: 100%; margin-bottom: -150px; }
+
+/* 
+* Parallax Content
+*******************/
+#parallax-container { height: 8000px; overflow: hidden; }
+#parallax-container.v2 { height: 19050px; }
+.parallax-content { overflow: hidden; position: fixed; width: 100%; height: 350px; padding: 200px 0 200px 0; top: 0; left: 0; }
+.parallax-content .text-area { width: 705px; height: 242px; margin: 0 0 0 -350px; position: absolute; top: 10%; left: 50%; text-align: center; }
+.parallax-content .text-area h3 { font-size: 42px; font-weight: bold; margin-bottom: 25px; line-height: 48px; }
+.parallax-content .text-area p { font-size: 20px; line-height: 26px;  }
+.parallax-content .text-area p.small { font-size: 14px; line-height: 20px; }
+
+/* Bay Bay Nakit Parallax */
+#parallax-intro { top: 0; width: 100%; height: 100%; z-index: 2; }
+#parallax-intro-1 { background: url('../../images/baybaynakit/parallax-intro-1.png.html') no-repeat; background-position:100% 0; width: 50%; height: 100%; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); z-index: 0; background-size: cover;}
+#parallax-intro-2 { background: url('../../images/baybaynakit/parallax-intro-2.png.html') no-repeat; background-position:100% 0; width: 50%; height: 1080px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); z-index: 1; right: 0; background-size: cover;}
+
+#parallax-intro-3 { background: url('../../images/baybaynakit/intro-2.png') no-repeat; width: 100%%; height: 100%; position: absolute; top: 0; z-index: 1; right: 0; background-size: cover;}
+
+#parallax-intro #intro-text { width: 50%; height: auto; z-index: 3; right: 0; top: 50%; position: absolute; margin: -20% 0 0 0; }
+#parallax-intro #intro-text img { display: block; margin: 0 auto; width: 70%;}
+
+#parallax-intro #scroll-text { position: absolute; top: 100%; width: 50%; right: 0; height: auto; display: block; z-index: 1; margin: -170px 0 0 0;}
+#parallax-intro #scroll-text img { display: block; margin: 0 auto; }
+#parallax-intro #intro-scroll { background: url('../../images/baybaynakit/intro-scroll-btn.png') no-repeat center top; position: absolute; top: 100%; width: 50%; right: 0; height: 78px; display: block; 
+
+
+
+/*transition*/
+-webkit-transition:transform 1s linear;
+   -moz-transition:transform 1s linear;
+     -o-transition:transform 1s linear;
+        transition:transform 1s linear;
+/*animation-name*/
+-webkit-animation-name:jump;
+   -moz-animation-name:jump;
+    -ms-animation-name:jump;
+     -o-animation-name:jump;
+        animation-name:jump;
+/*animation-duration*/
+-webkit-animation-duration:2s;
+   -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+     -o-animation-duration:2s;
+        animation-duration:2s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+
+
+
+
+ z-index: 9;}
+
+#parallax-1 { background: url('../../images/baybaynakit/mor-oda.png') no-repeat; background-size: cover; }
+.parallax-content.v2 { color: #fff; }
+.parallax-content.v2 .text-area h3 { margin-bottom: 0; }
+.parallax-content.v2 .text-area p {  }
+
+#parallax-1 .content-inner { position: absolute; width: 700px; height: 521px; top: 50%; left: 50%; margin: -260px 0 0 -350px;  }
+#parallax-1 .text-area { z-index: 1; }
+#parallax-1 .text-area h3 { font-size: 26px; }
+#parallax-1 .text-area p {  }
+#parallax-1 #hirsiz-1 { width: 189px; height: 291px; position: absolute; top: 0px; left: 0; }
+#parallax-1 #hirsiz-2 { width: 192px; height: 172px; position: absolute; bottom: 0px; left: 0; z-index: 1;}
+#parallax-1 #hirsiz-3 { width: 192px; height: 172px; position: absolute; top: 100px; right: 0; }
+#parallax-1 .dollar-image { width: 475px; height: 521px; position: absolute; top: 50%; left: 50%;  margin: -15px 0 0 -237px; z-index: 2; }
+#parallax-1 .dollar-image img { display: block; margin: 0 auto; }
+#parallax-1 .table-purple { background: url('../../images/baybaynakit/mor-masa.png') no-repeat left top; width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50%; background-size: contain;}
+
+.top-light { background: url('../../images/baybaynakit/top-light.png') no-repeat center top; position: absolute; top: 10%; left: 50%; width: 50%; height: 90%; margin: -10% 0 0 -25%; z-index: 1; background-size: contain;}
+
+
+#parallax-2 { overflow: visible;}
+#light-transition { background: url('../../images/baybaynakit/bkm-hirsiz-2.png') no-repeat 0 0; background-size: cover; position: absolute; top: 0; width: 100%; height: 100%; z-index: 3;}
+
+#parallax-3 { background: #041c3b url('../../images/baybaynakit/lacivert-oda.png') no-repeat 0 0; background-size: cover; }
+#parallax-3 #table-blue { background: url('../../images/baybaynakit/lacivert-masa.png') no-repeat left top; width: 100%; height: 100%; position: fixed; top: 50%; left: 50%; margin: -48px 0 0 -50%; background-size: contain; z-index: -1;}
+#parallax-3 .dollar-bg { background: url('../../images/baybaynakit/front-money.png') no-repeat left top; background-size: contain; width: 100%; height: 100%; position: absolute; top: -5%; left: 0; }
+#parallax-3 .dollar-bg-2 { background: url('../../images/baybaynakit/back-money.png') no-repeat center top; background-size: contain; width: 100%; height: 100%; position: absolute; top: 5%; left: 0; }
+#parallax-3 .text-area { top: 65%; width: 750px; margin-left: -375px; }
+#parallax-3 .text-area h3 { font-size: 26px; }
+#parallax-3 .text-area p { font-size: 20px; }
+#parallax-3 #dollar-list { width: 552px; height: 185px; position: absolute; top: 50%; left: 50%;  margin: -50px 0 0 -276px; z-index: 2;  }
+#parallax-3 #dollar-list .one-dollar { background: url('../../images/baybaynakit/yeni-para-tek.png') no-repeat center top; width: 471px; height: 106px; position: absolute; top: 30px; left: 50%;  margin: 0px 0 0 -235px; z-index: 9; }
+#parallax-3 #dollar-list .one-dollar:nth-child(2) { top: 40px; z-index: 8;}
+#parallax-3 #dollar-list .one-dollar:nth-child(3) { top: 50px; z-index: 7;}
+#parallax-3 #dollar-list .one-dollar:nth-child(4) { top: 60px; z-index: 6;}
+#parallax-3 #dollar-list .one-dollar:nth-child(5) { top: 70px; z-index: 5;}
+#parallax-3 #dollar-list .one-dollar:nth-child(6) { top: 80px; z-index: 4;}
+#parallax-3 .orange-money-1 { background: url('../../images/baybaynakit/turuncu-para.png.html') no-repeat left top; background-size: 50%; width: 176px; height: 166px; position: absolute; top: 50%; left: 1%; z-index: 5; }
+#parallax-3 .orange-money-2 { background: url('../../images/baybaynakit/turuncu-para-2.png.html') no-repeat left top; background-size: 50%; width: 255px; height: 175px; position: absolute; top: 10%; left: 50%; z-index: 5; }
+#parallax-3 .orange-money-3 { background: url('../../images/baybaynakit/turuncu-para-3.png.html') no-repeat left top; background-size: 50%; width: 214px; height: 142px; position: absolute; top: 30%; left: 20%; z-index: 5; }
+#parallax-3 .blue-money-1 { background: url('../../images/baybaynakit/mavi-para.png.html') no-repeat left top; background-size: 50%; width: 255px; height: 175px; position: absolute; top: 40%; right: 1%; z-index: 5; }
+#parallax-3 .blue-money-2 { background: url('../../images/baybaynakit/mavi-para-2.png.html') no-repeat left top; background-size: 50%; width: 199px; height: 122px; position: absolute; top: 20%; left: 34%; z-index: 5; }
+#parallax-3 .blue-money-3 { background: url('../../images/baybaynakit/mavi-para-3.png.html') no-repeat left top; background-size: 50%; width: 214px; height: 142px; position: absolute; top: -52px; left: 6%; z-index: 5; }
+#parallax-3 .green-money-1 { background: url('../../images/baybaynakit/yesil-para.png.html') no-repeat left top; background-size: 50%; width: 177px; height: 166px; position: absolute; top: 15%; right: 2%; z-index: 5; }
+#parallax-3 .green-money-2 { background: url('../../images/baybaynakit/yesil-para-2.png.html') no-repeat left top; background-size: 50%; width: 255px; height: 175px; position: absolute; top: 75%; left: 5%; z-index: 5; }
+#parallax-3 .green-money-3 { background: url('../../images/baybaynakit/yesil-para-3.png.html') no-repeat left top; background-size: 50%; width: 214px; height: 142px; position: absolute; top: 80%; right: 0%; z-index: 5; }
+
+#parallax-4 { overflow: visible; }
+#parallax-4 #dollar-transition { background: url('../../images/baybaynakit/para-gecis.png') no-repeat 0 0; background-size: 100% 100%; position: absolute; top: 0; width: 100%; height: 100%; z-index: 3;}
+
+#parallax-5 { background: #ffb400 url('../../images/baybaynakit/yellow-bg.jpg') repeat-x 0 center; }
+#parallax-5 #cloud { background: url('../../images/baybaynakit/yellow-cloud.png') repeat-x left top; background-size: contain; width: 100%; height: 100%; position: absolute; top: 10%; right: 50%; margin: 0 -50% 0 0; z-index: 1; }
+#parallax-5 #place { background: url('../../images/baybaynakit/yellow-place.png') no-repeat center top; width: 85%; height: 100%; position: absolute; top: 50%; left: 50%; margin: -27% 0 0 -43%; background-size: contain; z-index: 2; }
+#parallax-5 #man-shadow { background: url('../../images/baybaynakit/baybay-adam-golge.gif') no-repeat left top; width: 212px; height: 340px; z-index: 2; position: absolute; left: -50%; top: 50%; margin: -250px 0 0 0; }
+#parallax-5 #man { background: url('../../images/baybaynakit/baybay-adam.gif') no-repeat left top; width: 357px; height: 480px; position: absolute; right: -50%; top: 50%; z-index: 3; margin: -240px 0 0 0; background-size: 357px 480px;}
+
+#parallax-6 { overflow: visible; z-index: 9;}
+#man-transition { background: url('../../images/baybaynakit/adam-gecis-1.png') no-repeat right top; background-size: contain; position: absolute; top: 0; width: 100%; height: 100%; z-index: 9; right: -590px;}
+
+#parallax-7 { background: url('../../images/baybaynakit/mekan-01.png') no-repeat 0 0; background-size: cover; top: 0; width: 100%; height: 100%; overflow: visible; }
+#parallax-7 .text-area { top: 50%; margin-top: -300px; }
+#parallax-7 .text-area h3 { font-size: 26px; }
+#parallax-7 .text-area p { font-size: 20px; }
+#parallax-7 #money-hand { background: url('../../images/baybaynakit/kol-ve-paralar.png') no-repeat top right; width: 100%; height: 250px; position: absolute; top: 63%; -webkit-transform: translate3d(13%, -50%, 0); -moz-transform: translate3d(13%, -50%, 0); transform: translate3d(13%, -50%, 0); }
+#parallax-7 #money-hand #cent-money { background: url('../../images/baybaynakit/bozuk-para.png') no-repeat left top; width: 54px; height: 56px; position: absolute; top: 10%; right: 150px; margin: 60px 0 0 0; }
+
+#parallax-8 { background: url('../../images/baybaynakit/sokak.png') no-repeat 0 0; background-size: cover; top: 0; left: 0%; width: 100%; height: 100%; }
+#parallax-8 .text-area h3 { font-size: 26px; }
+#parallax-8 .text-area p { font-size: 20px; }
+#parallax-8 #bozuk-transition { position: absolute; margin-top: -150px; }
+
+#garson { background: url('../../images/baybaynakit/garson.png') no-repeat left top; background-size: contain; width: 478px; height: 401px; position: absolute; bottom: 0%; margin: 0 0 0 0; z-index: 1; }
+
+#skater { background: url('../../images/baybaynakit/skater.png') no-repeat left top; background-size: contain; width: 264px; height: 315px; position: absolute; bottom: 7%; margin: 0 0 0 0; z-index: -1; }
+
+#parallax-8 #hand-3 { background: url('../../images/baybaynakit/para-uzatan-kol-1.png') no-repeat; background-position:100% 0; width: 50%; height: 179px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); z-index: 2;}
+#parallax-8 .hand-3-finger { background: url('../../images/baybaynakit/para-uzatan-kol-1-parmak.png') no-repeat; width: 239px; height: 128px; position: absolute; -webkit-transform: translate3d(-105px, -102px, 0); -moz-transform: translate3d(-105px, -102px, 0); transform: translate3d(-105px, -102px, 0); background-position: 100% 0; top: 50%; z-index: 3;}
+
+#parallax-8 #hand-4 { background: url('../../images/baybaynakit/para-uzatan-kol-2.png') no-repeat; width: 50%; height: 179px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -30%, 0); -moz-transform: translate3d(0%, -30%, 0); transform: translate3d(0%, -30%, 0); z-index: 1;}
+#parallax-8 .hand-4-finger { background: url('../../images/baybaynakit/para-uzatan-kol-2-parmak.png') no-repeat; background-position: 100% 0; width: 239px; height: 128px; position: absolute; z-index: 3; -webkit-transform: translate3d(54px, -68px, 0); -moz-transform: translate3d(54px, -68px, 0); transform: translate3d(54px, -68px, 0); top: 50%; z-index: 2;}
+
+#parallax-8 #hand-5 { background: url('../../images/baybaynakit/para-uzatan-kol-3.png') no-repeat;  background-position: 100% 0; width: 50%; height: 179px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); }
+#parallax-8 .hand-5-finger { background: url('../../images/baybaynakit/para-uzatan-kol-3-parmak.png') no-repeat; background-position: 100% 0; width: 239px; height: 128px; position: absolute; z-index: 3; -webkit-transform: translate3d(-107px, -100px, 0); -moz-transform: translate3d(-107px, -100px, 0); transform: translate3d(-107px, -100px, 0); top: 50%; }
+
+#parallax-8 #hand-6 { background: url('../../images/baybaynakit/para-uzatan-kol-4.png') no-repeat;  background-position: 0 0; width: 50%; height: 201px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); }
+#parallax-8 .hand-6-finger { background: url('../../images/baybaynakit/para-uzatan-kol-4-parmak.png') no-repeat; background-position: 100% 0; width: 239px; height: 128px; position: absolute; z-index: 3; -webkit-transform: translate3d(124px, -94px, 0); -moz-transform: translate3d(124px, -94px, 0); transform: translate3d(124px, -94px, 0); top: 50%; }
+
+#parallax-8 #hand-7 { background: url('../../images/baybaynakit/para-uzatan-kol-5.png') no-repeat; background-position:100% 0; width: 50%; height: 179px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); z-index: 2;}
+#parallax-8 .hand-7-finger { background: url('../../images/baybaynakit/para-uzatan-kol-5-parmak.png') no-repeat; width: 239px; height: 128px; position: absolute; -webkit-transform: translate3d(-105px, -102px, 0); -moz-transform: translate3d(-105px, -102px, 0); transform: translate3d(-105px, -102px, 0); background-position: 100% 0; top: 50%; z-index: 4;}
+
+#parallax-8 #hand-8 { background: url('../../images/baybaynakit/para-uzatan-kol-6.png') no-repeat; width: 50%; height: 222px; position: absolute; top: 50%; -webkit-transform: translate3d(0%, -50%, 0); -moz-transform: translate3d(0%, -50%, 0); transform: translate3d(0%, -50%, 0); }
+#parallax-8 .hand-8-finger { background: url('../../images/baybaynakit/para-uzatan-kol-6-parmak.png') no-repeat; background-position: 100% 0; width: 239px; height: 131px; position: absolute; z-index: 3; -webkit-transform: translate3d(-62px, -20px, 0); -moz-transform: translate3d(-62px, -20px, 0); transform: translate3d(-62px, -20px, 0); top: 50%; }
+
+
+#parallax-8 .dollar-1 { background: url('../../images/baybaynakit/el-degistiren-para-1.png') no-repeat; background-size: contain; -webkit-transform: translate3d(-50%, -50%, 0); -moz-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); width: 353px; height: 177px; position: absolute; top: 50%; left: 50%; z-index: 1; }
+
+#parallax-8 .dollar-2 { background: url('../../images/baybaynakit/el-degistiren-para-2.png') no-repeat; background-size: contain; -webkit-transform: translate3d(-50%, -50%, 0); -moz-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); width: 353px; height: 177px; position: absolute; top: 50%; left: 50%; z-index: 2; }
+
+#parallax-8 .dollar-3 { background: url('../../images/baybaynakit/el-degistiren-para-3.png') no-repeat; background-size: contain; -webkit-transform: translate3d(-48%, -47%, 0); -moz-transform: translate3d(-48%, -47%, 0); transform: translate3d(-48%, -47%, 0); width: 352px; height: 202px; position: absolute; top: 50%; left: 50%; z-index: 3; }
+
+#parallax-8 #resto-bg { background: url('../../images/baybaynakit/restoran-2.png') no-repeat; background-size: cover; width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+#parallax-8 #space-bg { background: url('../../images/baybaynakit/uzay.jpg') no-repeat; background-size: cover; width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+#astronaut { background: url('../../images/baybaynakit/astonaut-2.png') no-repeat left top; width: 244px; height: 315px; display: block; position: absolute; top: 50%; left: 50%; opacity: 0; z-index: 1; margin: 0 0 0 -322px;
+
+-webkit-transition: transform 15s linear; -webkit-transform-origin: 50% 50%; -webkit-animation-name: rotate2; -webkit-animation-duration: 15s; -webkit-animation-iteration-count: infinite; 
+
+-moz-transition: transform 15s linear; -moz-transform-origin: 50% 50%; -moz-animation-name: rotate2; -moz-animation-duration: 15s; -moz-animation-iteration-count: infinite; 
+
+transition: transform 15s linear; transform-origin: 50% 50%; animation-name: rotate2; animation-duration: 15s; animation-iteration-count: infinite; 
+
+}
+
+
+#parallax-9 { overflow: visible;}
+#parallax-9 .text-hold { background: #14403c; width: 90%; height: 100%; top: 0% !important; left: 50%; margin: 0 0 0 -45%; position: absolute;}
+#parallax-9 .text-area {  }
+#parallax-9 .text-area h3 { font-size: 26px; color: #7a9b7a; }
+#parallax-9 .text-area p { font-size: 20px; color: #7a9b7a; }
+#parallax-9 .xray-animation { background: url('../../images/baybaynakit/x-ray.gif') no-repeat left top; width: 822px; height: 428px; top: 50%; left: 50%; margin: -114px 0 0 -411px; position: absolute; }
+
+#parallax-9 #left-money { background: url('../../images/baybaynakit/sol-paralar.png') no-repeat; background-size: cover; width: 83%; height: 100%; position: absolute; top: 0; z-index: 100; left: 0; background-position: 0 0;}
+#parallax-9 #right-money { background: url('../../images/baybaynakit/sag-paralar-.png') no-repeat; background-size: cover; width: 83%; height: 100%; position: absolute; top: 0; z-index: 12; right: 0; background-position: 0 0;}
+
+#parallax-10 { background: #32cfc2; }
+#parallax-10 .inner { width: 950px; position: absolute; height: 100%; margin: -15% 0 0 -475px; top: 50%; left: 50%; }
+#parallax-10 .title-1 { background: url('../../images/baybaynakit/son-text-en.png') no-repeat left top; width: 542px; height: 357px; left: 0; top: 0; position: absolute; z-index: 9; }
+#parallax-10 .shape-2 { background: url('../../images/baybaynakit/son-patlangac.png') no-repeat left top; width: 443px; height: 403px; right: 0; top: -100px; position: absolute; width: 589px; height: 590px; 
+
+-webkit-transition: transform 1s linear; -webkit-transform-origin: center center; -webkit-transform-style: preserve-3D; -webkit-animation-name: rotate; -webkit-animation-duration: 35000ms; -webkit-animation-iteration-count: infinite;
+
+-moz-transition: transform 1s linear; -moz-transform-origin: center center; -moz-transform-style: preserve-3D; -moz-animation-name: rotate; -moz-animation-duration: 35000ms; -moz-animation-iteration-count: infinite;
+
+transition: transform 1s linear; transform-origin: center center; transform-style: preserve-3D; animation-name: rotate; animation-duration: 35000ms; animation-iteration-count: infinite;
+
+
+ }
+#parallax-10 .full-kol { position: absolute; right: 0; top: 20%; height: 879px; width: 100%; margin: -20% 0 0 0;}
+#parallax-10 .arm { background: url('../../images/baybaynakit/el-1.PNG') no-repeat left top; width: 356px; height: 561px; position: absolute; top: 50%; right: 0; margin: -268px 175px 0 0;}
+#parallax-10 .finger-1 { background: url('../../images/baybaynakit/parmak-1.png') no-repeat left top; width: 197px; height: 318px; position: absolute; top: 0; right: 178px; 
+
+-webkit-transition: transform 1s linear; -webkit-transform-origin: 155px 266px; -webkit-animation-name: amex; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; 
+
+-moz-transition: transform 1s linear; -moz-transform-origin: 155px 266px; -moz-animation-name: amex; -moz-animation-duration: 2s; -moz-animation-iteration-count: infinite; 
+
+transition: transform 1s linear; transform-origin: 155px 266px; animation-name: amex; animation-duration: 2s; animation-iteration-count: infinite; 
+
+ margin: -50px 0 0 0;}
+
+#parallax-10 #social { position: absolute; top: 60%; right: 0; }
+#parallax-10 #social a { display: block; width: 45px; height: 45px; float: left; margin: 0 15px 0 0; }
+#parallax-10 #social #fb-icon { background: url('../../images/baybaynakit/facebook.png') no-repeat left top; }
+#parallax-10 #social #tw-icon { background: url('../../images/baybaynakit/twitter.png') no-repeat left top; }
+
+#parallax-11 { overflow: visible; }
+
+.text-1 { width: 673px; height: 207px; position: absolute; top: 30%; left: 50%; margin: -100px 0 0 -336px; z-index: 2; }
+.text-2 { width: 850px; height: 169px; position: absolute; top: 30%; left: 50%; margin: 100px 0 0 -425px;z-index: 1; }
+.text-3 { width: 779px; height: 128px; position: absolute; top: 5%; left: 50%; margin: 60px 0 0 -389px; z-index: 1; }
+.text-4 { width: 535px; height: 157px; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -267px; z-index: 9; }
+.text-4-5 { width: 365px; height: 87px; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -182px; z-index: 9; }
+.text-5 { width: 450px; height: 221px; position: absolute; top: 50%; left: 50%; margin: -270px 0 0 -225px; z-index: 9; }
+.text-6 { width: 650px; height: 123px; position: absolute; top: 50%; left: 50%; margin: -200px 0 0 -325px; z-index: 8; }
+.single-fake-money { width: 822px; height: 428px; position: absolute; top: 50%; left: 50%; margin: -70px 0 0 -411px; z-index: 8; }
+.single-fake-money img { width: 80%; margin: 0 auto; display: block; }
+
+@-webkit-keyframes rotate {
+	from { -webkit-transform:rotate(360deg);
+	   -moz-transform:rotate(360deg);
+	    -ms-transform:rotate(360deg);
+	     -o-transform:rotate(360deg);
+	        transform:rotate(360deg); }
+	50% { -webkit-transform:rotate(0deg);
+	   -moz-transform:rotate(0deg);
+	    -ms-transform:rotate(0deg);
+	     -o-transform:rotate(0deg);
+	        transform:rotate(0deg); }
+	to {  -webkit-transform:rotate(360deg);
+	   -moz-transform:rotate(360deg);
+	    -ms-transform:rotate(360deg);
+	     -o-transform:rotate(360deg);
+	        transform:rotate(360deg); }
+}
+
+
+@-webkit-keyframes rotate2 {
+	0% { -webkit-transform:rotate(0deg);
+	   -moz-transform:rotate(0deg);
+	    -ms-transform:rotate(0deg);
+	     -o-transform:rotate(0deg);
+	        transform:rotate(0deg); }
+    50% { -webkit-transform:rotate(-45deg);
+      -moz-transform:rotate(-45deg);
+       -ms-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+           transform:rotate(-45deg); }
+	100% { -webkit-transform:rotate(0deg);
+	   -moz-transform:rotate(0deg);
+	    -ms-transform:rotate(0deg);
+	     -o-transform:rotate(0deg);
+	        transform:rotate(0deg); }
+
+}
+
+@-webkit-keyframes amex {
+	from { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); transform: rotate(30deg); }
+	to { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@-webkit-keyframes jump {
+	from { margin-top: -100px; }
+	50% { margin-top: -90px; }
+	to { margin-top: -100px; }
+}
+
+/* NAV */
+
+.nav .thumb {
+    width: 0;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.56);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50FFFFFF,endColorstr=#50FFFFFF); 
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: width 800ms ease;
+-moz-transition: width 800ms ease;
+-ms-transition: width 800ms ease;
+-o-transition: width 800ms ease;
+transition: width 800ms ease;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    display: inline-block;
+    margin-top: -8px;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    left: 140%;
+}
+.nav li:hover .thumb {
+    width: auto;
+    cursor: pointer;
+    padding: 6px;
+}
+.nav {
+  top: 50%;
+  height: 240px;
+  margin-top:-120px;
+  position: fixed;
+  z-index: 999999;
+  left: 20px;
+}
+.nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav li {
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.nav li a {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-indent: -999em; /* make the text accessible to screen readers */
+    cursor: pointer;
+    position: absolute;
+}
+
+.nav li a:focus {
+    outline: none;
+}
+
+.nav li a {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px white;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav li a.active {
+    box-shadow: inset 0 0 0 8px white;
+    /*box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6)*/
+}
+
+.lt-ie9 .nav li a {background: url("../../images/baybaynakit/mdot.png.html");width: 17px;height: 17px;}
+.lt-ie9 .nav li a:hover,
+.lt-ie9 .nav li a:focus,
+.lt-ie9 .nav li a.active {background: url("../../images/baybaynakit/mdot-a.png.html");}
+
+.nav li.current a {
+    box-shadow: inset 0 0 0 8px white;
+}
+.bkm-orj {width: 181px; height: 57px; z-index: 999999; position: fixed; left: 130px; bottom: 30px; display: block; background: rgba(0, 0, 0,0.5); border-radius: 33px; color: #fff; text-align: center; line-height: 57px;}
+.bkm-orj:hover{color: #fff;background: rgba(0, 0, 0,0.6);text-decoration: none;}

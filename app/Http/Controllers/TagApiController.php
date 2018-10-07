@@ -6,11 +6,16 @@ use Illuminate\Http\Request;
 use App\ConnectionTag;
 use App\Action;
 use Browser;
+use Cookie;
 
 class TagApiController extends Controller
 {
     public function runAction(Request $request, ConnectionTag $connectionTag, $qccode = 0)
     {
+        //set user_id if not setted
+        if(is_null($request->cookie('user_id'))){
+            Cookie::queue('user_id', str_random(15), 24 * 31 * 12);
+        }
         //new Action
         $action = new Action;
         $action->user_agent = $request->header('User-Agent');
@@ -26,6 +31,7 @@ class TagApiController extends Controller
         $action->device_model = Browser::deviceModel();
         $action->mobile_grade = Browser::mobileGrade();
         $action->connection_tag_id = $connectionTag->id;
+        $action->user_id = $request->cookie('user_id');
         //detect coming from
         if ($qccode != 0) {
             $action->from_type = 1; // coming from qr code

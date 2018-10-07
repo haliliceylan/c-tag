@@ -22,7 +22,7 @@ class ConnectionTagController extends Controller
           'title' => 'Connection Tag Listesi',
           'columns' => [
             (object)['label' => 'ID','name' => 'ctag_id'],
-            (object)['label' => 'Etkileşim Adresi','name' => 'action_url'],
+            //(object)['label' => 'Etkileşim Adresi','name' => 'action_url'],
           ],
           'datas' => ConnectionTag::all(),
         ];

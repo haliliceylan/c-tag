@@ -22,6 +22,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
     Route::group(['middleware' => ['SentinelAuth:auth']], function () {
         Route::get('/logout', 'AdminPageController@logout')->name('logout');
         Route::get('/', 'AdminPageController@index')->name('index');
+        Route::get('/user','ActionController@showByUser')->name('show_user_actions');
         Route::resource('/tag', 'ConnectionTagController', ['parameters' => ['tag' => 'connectionTag'],'only' => ['index','show','edit','update']]);
         Route::get('/tag/{connectionTag}/reset', 'ConnectionTagController@reset')->name('tag.reset');
         Route::get('/tag/{connectionTag}/qc-code', 'ConnectionTagController@qrcode')->name('tag.qrcode');

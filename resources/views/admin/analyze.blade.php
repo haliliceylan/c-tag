@@ -3,6 +3,7 @@
 @endsection
 @section('content')
 <div class="row">
+  @if(isset($data->char))
   <div class="col-md-6">
     <!-- DONUT CHART -->
     <div class="box box-danger">
@@ -22,7 +23,8 @@
     </div>
     <!-- /.box -->
   </div>
-  <div class="col-md-6">
+  @endif
+  <div class="col-md-{{(isset($data->char) ? 6 : 12)}}">
     <?php $x=0; ?>
     <div class="row">
     @foreach($data->boxes as $box)
@@ -63,6 +65,7 @@
               @foreach($data->table->columns as $column)
               <th class="dt-center">{{$column->label}}</th>
               @endforeach
+              <th class="dt-center">Kullanıcı Kodu</th>
             </tr>
           </thead>
           <tbody>
@@ -74,6 +77,9 @@
               @foreach($data->table->columns as $column)
               <td class="dt-center"><?=$datax->{$column->name}?></td>
               @endforeach
+              <td class="dt-center">
+                <a href="{{route('admin.show_user_actions')}}?user_id={{$datax->user_id}}">{{$datax->user_id}}</a>
+              </td>
             </tr>
             @endforeach
           </tbody>
@@ -173,6 +179,7 @@ $('#MRBH').DataTable({
 		}
   })
 //DONUT CHART
+@if(isset($data->char))
 var donut = new Morris.Donut({
   element: 'sales-chart',
   resize: true,
@@ -180,6 +187,7 @@ var donut = new Morris.Donut({
   data: {!!$data->chart->json!!},
   hideHover: 'auto'
 });
+@endif
 </script>
 <script type="text/javascript">
 function bcshow(hash){

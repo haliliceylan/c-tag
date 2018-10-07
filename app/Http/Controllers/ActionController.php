@@ -82,4 +82,26 @@ class ActionController extends Controller
     {
         //
     }
+
+    public function showByUser(Request $request){
+        $lastTouchTime = Action::where('user_id',$request->query('user_id'))->orderBy('created_at', 'desc')->first();
+        $lastTouchTime = ($lastTouchTime == null) ? "- <br> -" : $lastTouchTime->created_at->format("d-m-Y")."<br>".$lastTouchTime->created_at->format("H:i:s");
+        $data = (object) [
+        'table' => (object)[
+          'title' => 'Tüm Girişler',
+          'columns' => (object) [
+            (object)['name' => 'turkish_date', 'label' => 'Tarih'],
+            (object)['name' => 'ctag_id', 'label' => 'C-tag ID'],
+            (object)['name' => 'ip_address', 'label' => 'Ip Adresi'],
+            (object)['name' => 'coming_from', 'label' => 'Etkileşim Tipi'],
+          ],
+          'datas' => Action::where('user_id',$request->query('user_id'))->orderBy('created_at', 'desc')->get(),
+        ],
+        'boxes' => [
+          (object)['color' => 'aqua mini-box','count' => $lastTouchTime,'icon' => 'ion ion-clock','title' => 'Son Etkileşim Zamanı','action' => route('admin.index')],
+          (object)['color' => 'yellow','count' => Action::where('user_id',$request->query('user_id'))->count(),'icon' => 'ion ion-flash','title' => 'Toplam Etkileşim Sayısı','action' => route('admin.index')],
+        ],
+      ];
+        return view('admin.analyze', compact('data'));
+    }
 }

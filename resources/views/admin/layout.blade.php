@@ -49,7 +49,6 @@
               <li><a href="{{route('admin.index')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
               <li><a href="{{route('admin.tag.index')}}">Tag Yönetimi <span class="sr-only">(current)</span></a></li>
               <li><a href="{{route('admin.qrcode.index')}}">QC-Code <span class="sr-only">(current)</span></a></li>
-              <li><a href="{{route('admin.orders')}}">Siparişler <span class="sr-only">(current)</span></a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->

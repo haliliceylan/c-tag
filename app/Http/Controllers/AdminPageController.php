@@ -7,7 +7,6 @@ use App\Action;
 use App\ConnectionTag;
 use \DB;
 use Sentinel;
-use App\Order;
 
 class AdminPageController extends Controller
 {
@@ -79,22 +78,5 @@ class AdminPageController extends Controller
     {
         Sentinel::logout();
         return redirect()->route('admin.login');
-    }
-
-    public function orders(){
-      $data = (object) [
-        'table' => (object)[
-          'title' => 'Tüm Siparişler',
-          'columns' => (object) [
-            (object)['name' => 'turkish_date', 'label' => 'Tarih'],
-            (object)['name' => 'masa_id', 'label' => 'Masa No'],
-            (object)['name' => 'food_name', 'label' => 'Sipariş Adı'],
-            (object)['name' => 'string_options', 'label' => 'Sipariş Ekstra'],
-            (object)['name' => 'price', 'label' => 'Fiyat'],
-          ],
-          'datas' => Order::orderBy('created_at', 'desc')->get(),
-        ],
-      ];
-      return view('admin.analyze', compact('data'));
     }
 }

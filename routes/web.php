@@ -25,7 +25,6 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
         Route::resource('/tag', 'ConnectionTagController', ['parameters' => ['tag' => 'connectionTag'],'only' => ['index','show','edit','update']]);
         Route::get('/tag/{connectionTag}/reset', 'ConnectionTagController@reset')->name('tag.reset');
         Route::get('/tag/{connectionTag}/qc-code', 'ConnectionTagController@qrcode')->name('tag.qrcode');
-        Route::get('/orders','AdminPageController@orders')->name('orders');
         Route::group(['as' => 'qrcode.','prefix' => 'qrcode'], function () {
           Route::get('/','QRCodeController@form')->name('index');
           Route::get('/website','QRCodeController@website')->name('website');

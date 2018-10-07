@@ -89,6 +89,7 @@
               @foreach($data->table->columns as $column)
               <th class="dt-center">{{$column->label}}</th>
               @endforeach
+              <th class="dt-center">Kullanıcı Kodu</th>
             </tr>
           </tfoot>
         </table>

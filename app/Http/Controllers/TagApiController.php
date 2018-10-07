@@ -14,7 +14,10 @@ class TagApiController extends Controller
     {
         //set user_id if not setted
         if(is_null($request->cookie('user_id'))){
-            Cookie::queue('user_id', str_random(15), 24 * 31 * 12);
+            $user_id = str_random(15);
+            Cookie::queue('user_id', $user_id, 24 * 31 * 12);
+        }else{
+            $user_id = $request->cookie('user_id');
         }
         //new Action
         $action = new Action;
@@ -31,7 +34,7 @@ class TagApiController extends Controller
         $action->device_model = Browser::deviceModel();
         $action->mobile_grade = Browser::mobileGrade();
         $action->connection_tag_id = $connectionTag->id;
-        $action->user_id = $request->cookie('user_id');
+        $action->user_id = $user_id;
         //detect coming from
         if ($qccode != 0) {
             $action->from_type = 1; // coming from qr code

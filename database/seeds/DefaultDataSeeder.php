@@ -21,22 +21,10 @@ class DefaultDataSeeder extends Seeder
             'last_name' => 'DAYANÇ'
         ]);
         Sentinel::registerAndActivate([
-            'email'    => 'erdenay@peakloop.com',
-            'password' => 'peakloop@12345',
-            'first_name' => 'Erdenay',
-            'last_name' => 'ÖZKANLI'
-        ]);
-        Sentinel::registerAndActivate([
             'email'    => 'halil@peakloop.com',
             'password' => 'peakloop@12345',
             'first_name' => 'Halil İbrahim',
             'last_name' => 'CEYLAN'
-        ]);
-        Sentinel::registerAndActivate([
-            'email'    => 'nihat@peakloop.com',
-            'password' => 'peakloop@12345',
-            'first_name' => 'Nihat Yılmaz',
-            'last_name' => 'ŞİMŞEK'
         ]);
     }
 }

@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
     Route::group(['middleware' => ['SentinelAuth:guest']], function () {
         Route::get('/login', 'AdminPageController@login')->name('login');

@@ -14,7 +14,7 @@ class AddColoumnToActions extends Migration
     public function up()
     {
         Schema::table('actions', function (Blueprint $table) {
-            $table->text('acceptable_country')->default("tr-TR");
+            $table->string('acceptable_country')->default("tr-TR");
         });
     }
 
